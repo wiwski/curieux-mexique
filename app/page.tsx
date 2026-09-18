@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, CalendarDays, MapPinned, Sparkles } from 'lucide-react';
+import { ArrowRight, CalendarDays, MapPinned } from 'lucide-react';
 import { EventCard } from '@/components/event-card';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
@@ -20,7 +20,6 @@ export default function Home() {
 
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow"><Sparkles aria-hidden="true" /> Festival culturel en Cap-Sizun</p>
             <h1 id="hero-title">Curieux<span>Mexique</span></h1>
             <p className="hero-lead">
               Deux mois pour découvrir le Mexique par la photographie, la
@@ -58,14 +57,12 @@ export default function Home() {
               priority
               className="poster-image"
             />
-            <figcaption>Programme culturel · Cap-Sizun</figcaption>
           </figure>
         </section>
 
         <section className="upcoming" aria-labelledby="upcoming-title">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">À ne pas manquer</p>
               <h2 id="upcoming-title">Les premiers rendez-vous</h2>
             </div>
             <Link href="/programme/" className="text-link">

@@ -24,7 +24,6 @@ export default function VenuesPage() {
       <div className="page-shell">
         <SiteHeader />
         <header className="page-intro">
-          <p className="eyebrow">Tout le Cap-Sizun</p>
           <h1>Les lieux</h1>
           <p>Bibliothèques, salles, tiers-lieux et espaces culturels accueillent le programme au plus près des habitantes et habitants.</p>
         </header>
