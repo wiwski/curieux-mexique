@@ -4,7 +4,7 @@ import './globals.css';
 const title = 'Curieux Mexique 2026';
 const description =
   'Le programme culturel Curieux Mexique en Cap-Sizun, en octobre et novembre 2026.';
-const siteUrl = 'https://curieux-mexique-2026.fair-mole-0129.chatgpt.site';
+const siteUrl = 'https://curieux-mexique-2026.else809049.chatgpt.site';
 const socialImage = new URL('/og.png', siteUrl).toString();
 
 export const metadata: Metadata = {
