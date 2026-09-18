@@ -1,0 +1,608 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://curieux-mexique.example/schemas/programme.schema.json",
+  "title": "Programme Curieux Mexique",
+  "description": "Modele normalise de l'edition, des manifestations, des seances, des lieux, des publics et des intervenants.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "edition",
+    "audiences",
+    "formats",
+    "themes",
+    "venues",
+    "contributors",
+    "events",
+    "sessions"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "edition": {
+      "$ref": "#/$defs/edition"
+    },
+    "audiences": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/audience"
+      }
+    },
+    "formats": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/taxonomyTerm"
+      }
+    },
+    "themes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/taxonomyTerm"
+      }
+    },
+    "venues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/venue"
+      }
+    },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/contributor"
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    },
+    "sessions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/session"
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "sourceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": ["brochure", "working-document", "official-web"]
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "uniqueItems": true
+        },
+        "note": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "notes"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["confirmed", "needs-review"]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "edition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "year",
+        "startsOn",
+        "endsOn",
+        "territory",
+        "timezone",
+        "contactEmail",
+        "tagline",
+        "editorial",
+        "mediation",
+        "partnerContributorIds"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "name": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "startsOn": {
+          "type": "string",
+          "format": "date"
+        },
+        "endsOn": {
+          "type": "string",
+          "format": "date"
+        },
+        "territory": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "contactEmail": {
+          "type": "string",
+          "format": "email"
+        },
+        "tagline": {
+          "type": "string"
+        },
+        "editorial": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["title", "body", "author", "authorRole"],
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "body": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "author": {
+              "type": "string"
+            },
+            "authorRole": {
+              "type": "string"
+            }
+          }
+        },
+        "mediation": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "partnerContributorIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "audience": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "description"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "label": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "taxonomyTerm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "label": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "address": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["locality", "countryCode"],
+      "properties": {
+        "street": {
+          "type": ["string", "null"]
+        },
+        "postalCode": {
+          "type": ["string", "null"]
+        },
+        "locality": {
+          "type": "string"
+        },
+        "countryCode": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        }
+      }
+    },
+    "geo": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["latitude", "longitude"],
+      "properties": {
+        "latitude": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        }
+      }
+    },
+    "venue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "slug", "name", "kind", "address", "geo", "sourceRefs", "review"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "slug": {
+          "$ref": "#/$defs/id"
+        },
+        "name": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "library",
+            "media-library",
+            "cinema",
+            "theatre",
+            "cultural-centre",
+            "community-space",
+            "music-venue",
+            "bar",
+            "bakery",
+            "games-library",
+            "exhibition-space",
+            "territory",
+            "other"
+          ]
+        },
+        "address": {
+          "$ref": "#/$defs/address"
+        },
+        "geo": {
+          "$ref": "#/$defs/geo"
+        },
+        "website": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourceRef"
+          }
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        }
+      }
+    },
+    "contributor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "slug", "kind", "name", "roles", "bio", "sourceRefs", "review"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "slug": {
+          "$ref": "#/$defs/id"
+        },
+        "kind": {
+          "type": "string",
+          "enum": ["person", "duo", "collective", "organization"]
+        },
+        "name": {
+          "type": "string"
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "bio": {
+          "type": ["string", "null"]
+        },
+        "website": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourceRef"
+          }
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        }
+      }
+    },
+    "credit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["contributorId", "role"],
+      "properties": {
+        "contributorId": {
+          "$ref": "#/$defs/id"
+        },
+        "role": {
+          "type": "string"
+        }
+      }
+    },
+    "pricing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "details"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["free", "paid", "unknown"]
+        },
+        "details": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "registration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "method", "value", "label"],
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "method": {
+          "type": "string",
+          "enum": ["email", "external-url", "phone", "on-site", "none", "unknown"]
+        },
+        "value": {
+          "type": ["string", "null"]
+        },
+        "label": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "slug",
+        "title",
+        "summary",
+        "description",
+        "formatId",
+        "themeIds",
+        "audienceIds",
+        "ageRange",
+        "pricing",
+        "registration",
+        "credits",
+        "featured",
+        "sourceRefs",
+        "review"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "slug": {
+          "$ref": "#/$defs/id"
+        },
+        "title": {
+          "type": "string"
+        },
+        "shortTitle": {
+          "type": ["string", "null"]
+        },
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": ["string", "null"]
+        },
+        "formatId": {
+          "$ref": "#/$defs/id"
+        },
+        "themeIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "audienceIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "ageRange": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "properties": {
+            "minimum": {
+              "type": ["integer", "null"],
+              "minimum": 0
+            },
+            "maximum": {
+              "type": ["integer", "null"],
+              "minimum": 0
+            },
+            "label": {
+              "type": ["string", "null"]
+            }
+          }
+        },
+        "pricing": {
+          "$ref": "#/$defs/pricing"
+        },
+        "registration": {
+          "$ref": "#/$defs/registration"
+        },
+        "credits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/credit"
+          }
+        },
+        "featured": {
+          "type": "boolean"
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourceRef"
+          }
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        }
+      }
+    },
+    "scheduledTiming": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "startsAt"],
+      "properties": {
+        "kind": {
+          "const": "scheduled"
+        },
+        "startsAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "endsAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        }
+      }
+    },
+    "dateRangeTiming": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "startsOn", "endsOn"],
+      "properties": {
+        "kind": {
+          "const": "date-range"
+        },
+        "startsOn": {
+          "type": "string",
+          "format": "date"
+        },
+        "endsOn": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "session": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "eventId", "timing", "venueId", "timezone", "status", "sourceRefs", "review"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "eventId": {
+          "$ref": "#/$defs/id"
+        },
+        "timing": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/scheduledTiming"
+            },
+            {
+              "$ref": "#/$defs/dateRangeTiming"
+            }
+          ]
+        },
+        "venueId": {
+          "$ref": "#/$defs/id"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["scheduled", "cancelled", "postponed"]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourceRef"
+          }
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2932 @@
+{
+  "schemaVersion": "1.1.0",
+  "edition": {
+    "id": "curieux-mexique-2026",
+    "name": "Curieux Mexique",
+    "year": 2026,
+    "startsOn": "2026-10-01",
+    "endsOn": "2026-11-30",
+    "territory": "Cap-Sizun - Pointe du Raz",
+    "timezone": "Europe/Paris",
+    "contactEmail": "curieuxmexique@lilo.org",
+    "tagline": "Programme culturel en Cap-Sizun autour des cultures du Mexique",
+    "editorial": {
+      "title": "Mot du délégué à la culture",
+      "body": [
+        "Après la réussite de Curieux Japon à l'automne 2025, l'intercommunalité soutient un nouveau projet collectif ayant comme fil conducteur le dialogue culturel par-delà les frontières.",
+        "Associant de nombreux partenaires du territoire, l'événement offre aux habitantes et habitants la possibilité de découvrir la richesse de la civilisation mexicaine à travers la littérature, le chant, la musique, la danse, la photographie, le cinéma, la cuisine, l'artisanat et les arts créatifs.",
+        "Le projet vise à créer des passerelles entre les peuples et des interactions sociales et éducatives, grâce aux associations, médiathèques, bibliothèques, écoles, collèges et autres partenaires du Cap-Sizun."
+      ],
+      "author": "Frédéric Tanter",
+      "authorRole": "Vice-président de la Communauté de communes Cap Sizun - Pointe du Raz, délégué à la culture"
+    },
+    "mediation": [
+      "Actions auprès des publics éloignés, notamment en EHPAD, à Kan Ar Mor, dans les écoles et au collège.",
+      "Ateliers musicaux à l'école de musique Arviskol autour des rythmes et sonorités mexicains.",
+      "Sélections de documents consacrés au Mexique dans les bibliothèques et médiathèques du Cap-Sizun.",
+      "Atelier de collectage de sons dans les écoles et le collège, avec échange auprès d'une école du Mexique.",
+      "Jeux consacrés au Mexique avec la ludothèque Ti C'hoari en itinérance."
+    ],
+    "partnerContributorIds": [
+      "cap-sizun-pointe-du-raz",
+      "le-phare-cite-musicale",
+      "pas-de-quartier",
+      "departement-finistere",
+      "la-obra",
+      "info-jeunes-cap-sizun",
+      "arviskol",
+      "cinema-le-goyen",
+      "le-passage",
+      "ecoute-on-apprend",
+      "les-arts-singuliers",
+      "azimuts",
+      "la-pointe-emmaus",
+      "maison-phare-du-millier",
+      "le-pain-dans-le-jardin",
+      "la-pluie-dete",
+      "le-cedre-bleu",
+      "bibliotheque-primelin-organisation",
+      "bibliotheque-esquibien-organisation",
+      "bibliotheque-plogoff-organisation",
+      "bibliotheque-mahalon-organisation",
+      "bibliotheque-goulien-organisation",
+      "bibliotheque-ti-al-leor-organisation",
+      "mediatheque-jeanne-nabert-organisation"
+    ]
+  },
+  "audiences": [
+    {
+      "id": "all",
+      "label": "Tout public",
+      "description": "Manifestation ouverte à tous les publics, sous réserve d'une éventuelle indication d'âge."
+    },
+    {
+      "id": "children",
+      "label": "Enfants",
+      "description": "Manifestation destinée principalement aux enfants."
+    },
+    {
+      "id": "families",
+      "label": "Familles",
+      "description": "Manifestation adaptée à une participation en famille."
+    },
+    {
+      "id": "teens",
+      "label": "Adolescents",
+      "description": "Manifestation destinée ou ouverte aux adolescents."
+    },
+    {
+      "id": "adults",
+      "label": "Adultes",
+      "description": "Manifestation destinée principalement aux adultes."
+    }
+  ],
+  "formats": [
+    {
+      "id": "inauguration",
+      "label": "Inauguration"
+    },
+    {
+      "id": "workshop",
+      "label": "Atelier"
+    },
+    {
+      "id": "book-presentation",
+      "label": "Présentation de livre"
+    },
+    {
+      "id": "shared-meal",
+      "label": "Repas partagé"
+    },
+    {
+      "id": "reading",
+      "label": "Lecture"
+    },
+    {
+      "id": "screening",
+      "label": "Projection"
+    },
+    {
+      "id": "theatrical-reading",
+      "label": "Lecture théâtralisée"
+    },
+    {
+      "id": "language-cafe",
+      "label": "Café linguistique"
+    },
+    {
+      "id": "meeting",
+      "label": "Rencontre"
+    },
+    {
+      "id": "puppet-show",
+      "label": "Spectacle de marionnettes"
+    },
+    {
+      "id": "festival-day",
+      "label": "Journée festive"
+    },
+    {
+      "id": "concert",
+      "label": "Concert"
+    },
+    {
+      "id": "dance-class",
+      "label": "Initiation à la danse"
+    },
+    {
+      "id": "games",
+      "label": "Jeux"
+    },
+    {
+      "id": "musical-story",
+      "label": "Conte musical"
+    },
+    {
+      "id": "guided-tour",
+      "label": "Visite guidée"
+    },
+    {
+      "id": "exhibition",
+      "label": "Exposition"
+    },
+    {
+      "id": "jam-session",
+      "label": "Session musicale"
+    },
+    {
+      "id": "children-activity",
+      "label": "Animation pour enfants"
+    }
+  ],
+  "themes": [
+    {
+      "id": "visual-arts",
+      "label": "Arts visuels"
+    },
+    {
+      "id": "literature",
+      "label": "Littérature"
+    },
+    {
+      "id": "languages",
+      "label": "Langues"
+    },
+    {
+      "id": "cinema",
+      "label": "Cinéma"
+    },
+    {
+      "id": "food",
+      "label": "Cuisine"
+    },
+    {
+      "id": "games-theme",
+      "label": "Jeux"
+    },
+    {
+      "id": "theatre",
+      "label": "Théâtre et conte"
+    },
+    {
+      "id": "music",
+      "label": "Musique"
+    },
+    {
+      "id": "dance",
+      "label": "Danse"
+    },
+    {
+      "id": "photography",
+      "label": "Photographie"
+    },
+    {
+      "id": "heritage",
+      "label": "Patrimoine et traditions"
+    },
+    {
+      "id": "society",
+      "label": "Société"
+    },
+    {
+      "id": "women",
+      "label": "Femmes"
+    },
+    {
+      "id": "indigenous-cultures",
+      "label": "Cultures autochtones"
+    },
+    {
+      "id": "sound",
+      "label": "Création sonore"
+    },
+    {
+      "id": "migration",
+      "label": "Migration"
+    }
+  ],
+  "venues": [
+    {
+      "id": "maison-site-pointe-du-raz",
+      "slug": "maison-site-pointe-du-raz",
+      "name": "Maison du Site de la Pointe du Raz",
+      "kind": "exhibition-space",
+      "address": {
+        "street": "La Pointe du Raz",
+        "postalCode": "29770",
+        "locality": "Plogoff",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": "https://www.pointeduraz.com/",
+      "notes": [
+        "Le programme mentionne également la forme courte Maison du Site."
+      ],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [3, 4, 8, 9, 11, 14, 15]
+        },
+        {
+          "source": "official-web",
+          "url": "https://www.pointeduraz.com/sites/files_pointeduraz/files/feuillet_web.pdf"
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "la-pointe-emmaus-primelin",
+      "slug": "la-pointe-emmaus-primelin",
+      "name": "La Pointe Emmaüs",
+      "kind": "community-space",
+      "address": {
+        "street": "21 route de la Pointe du Raz",
+        "postalCode": "29770",
+        "locality": "Primelin",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": "https://www.cap-sizun.bzh/contacts/la-pointe-emmaus/",
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [5, 14]
+        },
+        {
+          "source": "official-web",
+          "url": "https://www.cap-sizun.bzh/contacts/la-pointe-emmaus/"
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "le-passage-pont-croix",
+      "slug": "le-passage-pont-croix",
+      "name": "Tiers-lieu Le Passage",
+      "kind": "community-space",
+      "address": {
+        "street": "6 rue des Boucheries",
+        "postalCode": null,
+        "locality": "Pont-Croix",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": null,
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [3, 5, 6, 7, 8, 9, 10, 14, 15]
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "mediatheque-jeanne-nabert",
+      "slug": "mediatheque-jeanne-nabert",
+      "name": "Médiathèque Jeanne Nabert",
+      "kind": "media-library",
+      "address": {
+        "street": "1 place du 8 Mai 1945",
+        "postalCode": null,
+        "locality": "Pont-Croix",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": null,
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [3, 6, 7, 8, 9, 14, 15]
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "bibliotheque-mahalon",
+      "slug": "bibliotheque-mahalon",
+      "name": "Bibliothèque de Mahalon",
+      "kind": "library",
+      "address": {
+        "street": "14 Le Bourg",
+        "postalCode": null,
+        "locality": "Mahalon",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": null,
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [3, 5, 6, 14, 15]
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "bibliotheque-primelin",
+      "slug": "bibliotheque-primelin",
+      "name": "Bibliothèque de Primelin",
+      "kind": "library",
+      "address": {
+        "street": "Route de l'Océan",
+        "postalCode": null,
+        "locality": "Primelin",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": null,
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [3, 4, 5, 6, 7, 14, 15]
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "bibliotheque-esquibien",
+      "slug": "bibliotheque-esquibien",
+      "name": "Bibliothèque Lecture et Loisirs",
+      "kind": "library",
+      "address": {
+        "street": "13 rue René Laënnec",
+        "postalCode": null,
+        "locality": "Esquibien - Audierne",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": null,
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [3]
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "bibliotheque-plogoff",
+      "slug": "bibliotheque-plogoff",
+      "name": "Bibliothèque de Plogoff",
+      "kind": "library",
+      "address": {
+        "street": "1 impasse Bel Air",
+        "postalCode": null,
+        "locality": "Plogoff",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": null,
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [3]
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "bibliotheque-ti-al-leor",
+      "slug": "bibliotheque-ti-al-leor",
+      "name": "Bibliothèque Ti Al Leor",
+      "kind": "library",
+      "address": {
+        "street": "11 rue de la Ville d'Ys",
+        "postalCode": null,
+        "locality": "Cléden-Cap-Sizun",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": null,
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [3, 5, 14]
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "cinema-le-goyen",
+      "slug": "cinema-le-goyen",
+      "name": "Cinéma Le Goyen",
+      "kind": "cinema",
+      "address": {
+        "street": "13 rue Louis Pasteur",
+        "postalCode": "29770",
+        "locality": "Audierne",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": null,
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [6, 7, 9, 14, 15]
+        },
+        {
+          "source": "official-web",
+          "url": "https://www.cap-sizun.bzh/theatre-cinema-cite-musicale/"
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "theatre-georges-madec",
+      "slug": "theatre-georges-madec",
+      "name": "Théâtre Georges Madec",
+      "kind": "theatre",
+      "address": {
+        "street": "1 rue Henri Sergent",
+        "postalCode": "29770",
+        "locality": "Esquibien - Audierne",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": null,
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [6, 14]
+        },
+        {
+          "source": "official-web",
+          "url": "https://www.cap-sizun.bzh/contacts/theatre-georges-madec/"
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "fournil-pain-dans-le-jardin",
+      "slug": "fournil-pain-dans-le-jardin",
+      "name": "Fournil Le pain dans le jardin",
+      "kind": "bakery",
+      "address": {
+        "street": null,
+        "postalCode": null,
+        "locality": "Poulgoazec",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": null,
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [6, 14]
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "espace-culturel-pont-croix",
+      "slug": "espace-culturel-pont-croix",
+      "name": "Espace culturel de Pont-Croix",
+      "kind": "cultural-centre",
+      "address": {
+        "street": "Place du 8 Mai 1945",
+        "postalCode": "29790",
+        "locality": "Pont-Croix",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": "https://www.pont-croix.fr/vivre-a-pont-croix/enfance-pont-croix/",
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [6, 8, 10, 11, 14, 15]
+        },
+        {
+          "source": "official-web",
+          "url": "https://www.pont-croix.fr/wp-content/uploads/2021/11/lpp_nov_2021_-2.pdf"
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "la-obra-pont-croix",
+      "slug": "la-obra-pont-croix",
+      "name": "La Obra",
+      "kind": "community-space",
+      "address": {
+        "street": "4 place du 8 Mai 1945",
+        "postalCode": "29790",
+        "locality": "Pont-Croix",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": "https://laobra.bzh/",
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [8, 14]
+        },
+        {
+          "source": "official-web",
+          "url": "https://laobra.bzh/"
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "bar-la-renverse",
+      "slug": "bar-la-renverse",
+      "name": "Bar La Renverse",
+      "kind": "bar",
+      "address": {
+        "street": "1 rue Amiral Guépratte",
+        "postalCode": "29770",
+        "locality": "Audierne",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": "https://la-renverse-bar-audierne.eatbu.com/?lang=fr",
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [8, 15]
+        },
+        {
+          "source": "official-web",
+          "url": "https://audierne.fr/aud-esq/wp-content/uploads/2019/04/2-Bar-Hotellerie-Restauration-SYNTHESE.pdf"
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "cite-musicale-le-phare",
+      "slug": "cite-musicale-le-phare",
+      "name": "Cité musicale Le Phare",
+      "kind": "music-venue",
+      "address": {
+        "street": "26 rue du Docteur Neïs",
+        "postalCode": "29790",
+        "locality": "Pont-Croix",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": "https://lepharepontcroix.com/",
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [3, 10, 15]
+        },
+        {
+          "source": "official-web",
+          "url": "https://lepharepontcroix.com/infos-pratiques-et-contact/"
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "le-cedre-bleu-pont-croix",
+      "slug": "le-cedre-bleu-pont-croix",
+      "name": "Le Cèdre Bleu",
+      "kind": "music-venue",
+      "address": {
+        "street": "24 bis boulevard du Général de Gaulle",
+        "postalCode": "29790",
+        "locality": "Pont-Croix",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": "https://lecedrebleu-px.fr/",
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [10, 15]
+        },
+        {
+          "source": "official-web",
+          "url": "https://lecedrebleu-px.fr/"
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "salle-polyvalente-primelin",
+      "slug": "salle-polyvalente-primelin",
+      "name": "Salle polyvalente de Primelin",
+      "kind": "cultural-centre",
+      "address": {
+        "street": "4 route de l'Océan",
+        "postalCode": "29770",
+        "locality": "Primelin",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": "https://primelin.fr/reservation-salle/",
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [7, 15]
+        },
+        {
+          "source": "official-web",
+          "url": "https://www.finistere.gouv.fr/contenu/telechargement/69875/525237/file/annexe%20%C3%A0%20AP%20%20bureaux%20de%20vote%20Finist%C3%A8re.pdf"
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "ludotheque-ti-choari",
+      "slug": "ludotheque-ti-choari",
+      "name": "Ludothèque Ti C'hoari",
+      "kind": "games-library",
+      "address": {
+        "street": "4 place du 8 Mai 1945",
+        "postalCode": "29790",
+        "locality": "Pont-Croix",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": "https://laobra.bzh/ludotheque/la-ludotheque-ti-choari-cest-quoi",
+      "notes": [],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [6, 14]
+        },
+        {
+          "source": "official-web",
+          "url": "https://laobra.bzh/ludotheque/la-ludotheque-ti-choari-cest-quoi"
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    },
+    {
+      "id": "territoire-cap-sizun",
+      "slug": "territoire-cap-sizun",
+      "name": "Ensemble du territoire du Cap-Sizun",
+      "kind": "territory",
+      "address": {
+        "street": null,
+        "postalCode": null,
+        "locality": "Cap-Sizun",
+        "countryCode": "FR"
+      },
+      "geo": null,
+      "website": null,
+      "notes": [
+        "Lieu abstrait utilisé pour les actions itinérantes sans adresse unique."
+      ],
+      "sourceRefs": [
+        {
+          "source": "brochure",
+          "pages": [4, 16]
+        }
+      ],
+      "review": {
+        "status": "confirmed",
+        "notes": []
+      }
+    }
+  ],
+  "contributors": [
+    {
+      "id": "sunny-quintero",
+      "slug": "sunny-quintero",
+      "kind": "person",
+      "name": "Sunny Quintero",
+      "roles": ["photojournaliste", "fondatrice de Mexican Women Photographers"],
+      "bio": "Photojournaliste à l'origine de Mexican Women Photographers, communauté numérique créée en 2022 pour faire connaître le travail de femmes mexicaines pratiquant la photographie de rue et documentaire.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [3, 4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "ramiro-chaves",
+      "slug": "ramiro-chaves",
+      "kind": "person",
+      "name": "Ramiro Chaves",
+      "roles": ["photographe"],
+      "bio": "Photographe argentin installé au Mexique, il développe une oeuvre qui explore les liens entre paysage, lumière et territoire.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [4, 11]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "lise-belperron",
+      "slug": "lise-belperron",
+      "kind": "person",
+      "name": "Lise Belperron",
+      "roles": ["traductrice", "musicienne"],
+      "bio": "Après presque dix ans aux éditions Métailié, Lise Belperron se consacre à la musique vivante et à la traduction littéraire d'autrices espagnoles et latino-américaines. Elle a notamment traduit des ouvrages de Dahlia de la Cerda et Mar García Puig.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [8, 12]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "carlos-perez-rojas",
+      "slug": "carlos-perez-rojas",
+      "kind": "person",
+      "name": "Carlos Pérez Rojas",
+      "roles": ["réalisateur", "monteur"],
+      "bio": "Réalisateur et monteur mexicain de cinéma documentaire, son travail autour des mouvements sociaux et des communautés autochtones cherche à éveiller la conscience des spectateurs par un message constructif.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [7, 8, 12]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "julie-metais",
+      "slug": "julie-metais",
+      "kind": "person",
+      "name": "Julie Métais",
+      "roles": ["anthropologue", "maîtresse de conférences"],
+      "bio": "Maîtresse de conférences au LISST de l'Université Toulouse Jean Jaurès, elle travaille sur l'école, les festivités locales, la construction de l'altérité et les liens entre utopies politiques et éducatives.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [9, 12]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "juliette-danfakha",
+      "slug": "juliette-danfakha",
+      "kind": "person",
+      "name": "Juliette Danfakha",
+      "roles": ["anthropologue", "chercheuse"],
+      "bio": "Attachée temporaire d'enseignement et de recherche à l'Institut des Hautes Études de l'Amérique latine de l'Université Sorbonne Nouvelle, elle a obtenu en 2025 le prix de thèse du GIS Institut du Genre.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [9, 12]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "martina-diaz-perez",
+      "slug": "martina-diaz-perez",
+      "kind": "person",
+      "name": "Martina Díaz Pérez",
+      "roles": ["autrice", "comédienne", "économiste"],
+      "bio": "Maya Tsotsil originaire du Chiapas, elle a travaillé avec des femmes autochtones sur les droits et l'émancipation. Installée à Douarnenez, elle écrit, joue et mène des ateliers d'écriture pour enfants.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [5, 9, 12]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "maelenn-bernard",
+      "slug": "maelenn-bernard",
+      "kind": "person",
+      "name": "Maelenn Bernard",
+      "roles": ["autrice", "animatrice d'ateliers"],
+      "bio": "Autrice d'un roman autobiographique mêlant prose, poésie, français et espagnol, elle anime des ateliers d'écriture et travaille avec Martina Díaz Pérez à un album jeunesse en breton et maya-tsotsil.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [5, 13]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "vero-traba",
+      "slug": "vero-traba",
+      "kind": "person",
+      "name": "Véro Traba",
+      "roles": ["autrice"],
+      "bio": "Avec Patxi Beltzaiz, elle propose une approche du Mexique attentive à la défense du territoire par les peuples autochtones. Son récit transmet le contexte et les paroles recueillies au fil de leurs séjours.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [4, 9, 13]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "patxi-beltzaiz",
+      "slug": "patxi-beltzaiz",
+      "kind": "person",
+      "name": "Patxi Beltzaiz",
+      "roles": ["photographe"],
+      "bio": "Avec Véro Traba, il documente depuis une décennie des territoires et communautés du Mexique, avec une attention particulière portée aux résistances autochtones.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [4, 9, 13]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "milena-espinal",
+      "slug": "milena-espinal",
+      "kind": "person",
+      "name": "Milena Espinal",
+      "roles": ["chanteuse", "artiste"],
+      "bio": "Artiste dont la recherche vocale explore les frontières entre littérature et musique ainsi que les liens entre corps, mouvement, imaginaire, sensibilité et territoire.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [10, 13]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "lionel-romieu",
+      "slug": "lionel-romieu",
+      "kind": "person",
+      "name": "Lionel Romieu",
+      "roles": ["auteur-compositeur", "multi-instrumentiste"],
+      "bio": "Auteur-compositeur, multi-instrumentiste et intervenant de formation, il apporte une large palette sonore aux projets qu'il anime et joue également avec le groupe Aksak.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [10, 13]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "yesenia-garcia-leon",
+      "slug": "yesenia-garcia-leon",
+      "kind": "person",
+      "name": "Yesenia García León",
+      "roles": ["chanteuse", "joueuse de jarana", "danseuse de zapateado"],
+      "bio": "Originaire de Veracruz, elle chante, joue de la jarana et danse le zapateado. Sa rencontre avec Olivier Catteau donne naissance à un duo mêlant sonorités mexicaines et accordéon diatonique.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [10, 13]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "olivier-catteau",
+      "slug": "olivier-catteau",
+      "kind": "person",
+      "name": "Olivier Catteau",
+      "roles": ["accordéoniste", "musicien"],
+      "bio": "Accordéoniste issu du milieu folk français, il forme avec Yesenia García León le duo La Selva Canta.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [10, 13]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "pablo-paz",
+      "slug": "pablo-paz",
+      "kind": "person",
+      "name": "Pablo Paz",
+      "roles": ["musicien", "multi-instrumentiste"],
+      "bio": "Musicien vivant à Mexico, il explore les musiques traditionnelles et contemporaines ainsi que les sonorités acoustiques et électroniques. Son travail accorde une place importante à la transmission.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [10, 13]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "anna-duval-guennoc",
+      "slug": "anna-duval-guennoc",
+      "kind": "person",
+      "name": "Anna Duval-Guennoc",
+      "roles": ["illustratrice"],
+      "bio": "Illustratrice de l'album K'o'k tan, dont les aquarelles transmettent l'ambiance et les couleurs du Chiapas.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [5]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "andre-kadi",
+      "slug": "andre-kadi",
+      "kind": "person",
+      "name": "André Kadi",
+      "roles": ["réalisateur"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [6]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "karine-vezina",
+      "slug": "karine-vezina",
+      "kind": "person",
+      "name": "Karine Vézina",
+      "roles": ["réalisatrice"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [6]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "lee-unkrich",
+      "slug": "lee-unkrich",
+      "kind": "person",
+      "name": "Lee Unkrich",
+      "roles": ["réalisateur"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [6]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "adrian-molina",
+      "slug": "adrian-molina",
+      "kind": "person",
+      "name": "Adrian Molina",
+      "roles": ["réalisateur"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [6]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "mathilde-gaillard",
+      "slug": "mathilde-gaillard",
+      "kind": "person",
+      "name": "Mathilde Gaillard",
+      "roles": ["animatrice d'atelier"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [6]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "christine-aube",
+      "slug": "christine-aube",
+      "kind": "person",
+      "name": "Christine Aubé",
+      "roles": ["conteuse", "chanteuse"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [6]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "jean-baptiste-farraigue",
+      "slug": "jean-baptiste-farraigue",
+      "kind": "person",
+      "name": "Jean-Baptiste Farraigue",
+      "roles": ["guitariste"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [6]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "germinal-roaux",
+      "slug": "germinal-roaux",
+      "kind": "person",
+      "name": "Germinal Roaux",
+      "roles": ["réalisateur"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [7]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "aracely-mendez",
+      "slug": "aracely-mendez",
+      "kind": "person",
+      "name": "Aracely Méndez",
+      "roles": ["réalisatrice"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "working-document", "note": "Crédit du court métrage Le ciel est très joli."}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "medhin-tewolde-serrano",
+      "slug": "medhin-tewolde-serrano",
+      "kind": "person",
+      "name": "Medhin Tewolde Serrano",
+      "roles": ["réalisatrice"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "working-document", "note": "Crédit du court métrage Nyanga."}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "liliana-kan",
+      "slug": "liliana-kan",
+      "kind": "person",
+      "name": "Liliana K'an",
+      "roles": ["réalisatrice"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "working-document", "note": "Crédit du court métrage Ventre de lune."}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "mayra-hermosillo",
+      "slug": "mayra-hermosillo",
+      "kind": "person",
+      "name": "Mayra Hermosillo",
+      "roles": ["réalisatrice"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [9]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "mexican-women-photographers",
+      "slug": "mexican-women-photographers",
+      "kind": "collective",
+      "name": "Mexican Women Photographers",
+      "roles": ["collectif photographique"],
+      "bio": "Communauté numérique créée en 2022 par Sunny Quintero pour faire connaître le travail de femmes mexicaines actives dans la photographie de rue et documentaire.",
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [3, 4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "dolina",
+      "slug": "dolina",
+      "kind": "collective",
+      "name": "Chorale Dolina",
+      "roles": ["chorale"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [6]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "escuela-cine-documental-san-cristobal",
+      "slug": "escuela-cine-documental-san-cristobal",
+      "kind": "organization",
+      "name": "Escuela de Cine Documental de San Cristóbal de las Casas",
+      "roles": ["école de cinéma documentaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [8]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "terra-nostra-films",
+      "slug": "terra-nostra-films",
+      "kind": "organization",
+      "name": "Terra Nostra Films",
+      "roles": ["production cinématographique"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [8]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "graines-de-liberte",
+      "slug": "graines-de-liberte",
+      "kind": "organization",
+      "name": "Graines de liberté",
+      "roles": ["association organisatrice"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [7]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "cap-sizun-pointe-du-raz",
+      "slug": "cap-sizun-pointe-du-raz",
+      "kind": "organization",
+      "name": "Communauté de communes Cap Sizun - Pointe du Raz",
+      "roles": ["collectivité partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [2, 16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "le-phare-cite-musicale",
+      "slug": "le-phare-cite-musicale",
+      "kind": "organization",
+      "name": "Le Phare - Cité musicale",
+      "roles": ["partenaire culturel"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "pas-de-quartier",
+      "slug": "pas-de-quartier",
+      "kind": "organization",
+      "name": "Pas de Quartier",
+      "roles": ["partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "departement-finistere",
+      "slug": "departement-finistere",
+      "kind": "organization",
+      "name": "Département du Finistère",
+      "roles": ["partenaire institutionnel"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "la-obra",
+      "slug": "la-obra",
+      "kind": "organization",
+      "name": "Strollad La Obra",
+      "roles": ["association partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "info-jeunes-cap-sizun",
+      "slug": "info-jeunes-cap-sizun",
+      "kind": "organization",
+      "name": "Info Jeunes Cap Sizun - Pointe du Raz",
+      "roles": ["information jeunesse", "organisateur"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [8, 16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "arviskol",
+      "slug": "arviskol",
+      "kind": "organization",
+      "name": "Arviskol",
+      "roles": ["école de musique", "partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "cinema-le-goyen",
+      "slug": "cinema-le-goyen",
+      "kind": "organization",
+      "name": "Cinéma Le Goyen",
+      "roles": ["cinéma partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "le-passage",
+      "slug": "le-passage",
+      "kind": "organization",
+      "name": "Tiers-lieu Le Passage",
+      "roles": ["tiers-lieu partenaire", "organisateur"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "ecoute-on-apprend",
+      "slug": "ecoute-on-apprend",
+      "kind": "organization",
+      "name": "Écoute, on apprend !",
+      "roles": ["association", "création sonore"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [4, 16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "les-arts-singuliers",
+      "slug": "les-arts-singuliers",
+      "kind": "organization",
+      "name": "Les Arts Singuliers",
+      "roles": ["association de théâtre", "organisateur"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [7, 16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "azimuts",
+      "slug": "azimuts",
+      "kind": "organization",
+      "name": "Association Azimuts",
+      "roles": ["association artistique", "organisateur"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [5, 7, 16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "la-pointe-emmaus",
+      "slug": "la-pointe-emmaus",
+      "kind": "organization",
+      "name": "La Pointe Emmaüs",
+      "roles": ["structure partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "maison-phare-du-millier",
+      "slug": "maison-phare-du-millier",
+      "kind": "organization",
+      "name": "Association Maison-phare du Millier",
+      "roles": ["association partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [4, 16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "le-pain-dans-le-jardin",
+      "slug": "le-pain-dans-le-jardin",
+      "kind": "organization",
+      "name": "Le pain dans le jardin",
+      "roles": ["fournil partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [6, 16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "la-pluie-dete",
+      "slug": "la-pluie-dete",
+      "kind": "organization",
+      "name": "Librairie La Pluie d'été",
+      "roles": ["librairie partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [8, 16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "le-cedre-bleu",
+      "slug": "le-cedre-bleu",
+      "kind": "organization",
+      "name": "Le Cèdre Bleu",
+      "roles": ["lieu musical partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "bibliotheque-primelin-organisation",
+      "slug": "bibliotheque-primelin-organisation",
+      "kind": "organization",
+      "name": "Bibliothèque de Primelin",
+      "roles": ["bibliothèque partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "bibliotheque-esquibien-organisation",
+      "slug": "bibliotheque-esquibien-organisation",
+      "kind": "organization",
+      "name": "Bibliothèque Lecture et Loisirs Esquibien",
+      "roles": ["bibliothèque partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "bibliotheque-plogoff-organisation",
+      "slug": "bibliotheque-plogoff-organisation",
+      "kind": "organization",
+      "name": "Bibliothèque de Plogoff",
+      "roles": ["bibliothèque partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "bibliotheque-mahalon-organisation",
+      "slug": "bibliotheque-mahalon-organisation",
+      "kind": "organization",
+      "name": "Bibliothèque de Mahalon",
+      "roles": ["bibliothèque partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "bibliotheque-goulien-organisation",
+      "slug": "bibliotheque-goulien-organisation",
+      "kind": "organization",
+      "name": "Bibliothèque de Goulien",
+      "roles": ["bibliothèque partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "bibliotheque-ti-al-leor-organisation",
+      "slug": "bibliotheque-ti-al-leor-organisation",
+      "kind": "organization",
+      "name": "Bibliothèque Ti Al Leor",
+      "roles": ["bibliothèque partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "mediatheque-jeanne-nabert-organisation",
+      "slug": "mediatheque-jeanne-nabert-organisation",
+      "kind": "organization",
+      "name": "Médiathèque Jeanne Nabert",
+      "roles": ["médiathèque partenaire"],
+      "bio": null,
+      "website": null,
+      "sourceRefs": [{"source": "brochure", "pages": [16]}],
+      "review": {"status": "confirmed", "notes": []}
+    }
+  ],
+  "events": [
+    {
+      "id": "inauguration-curieux-mexique",
+      "slug": "inauguration-curieux-mexique",
+      "title": "Inauguration de Curieux Mexique",
+      "shortTitle": "Inauguration",
+      "summary": "Vernissage des expositions Fotografas de la vida cotidiana et De phare en lumière.",
+      "description": "Ouverture officielle de Curieux Mexique et vernissage des deux expositions photographiques présentées à la Maison du Site de la Pointe du Raz.",
+      "formatId": "inauguration",
+      "themeIds": ["photography", "visual-arts"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "sunny-quintero", "role": "commissariat du parcours Fotografas de la vida cotidiana"},
+        {"contributorId": "ramiro-chaves", "role": "photographe de l'exposition De phare en lumière"}
+      ],
+      "featured": true,
+      "sourceRefs": [{"source": "brochure", "pages": [11, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "presentation-kok-tan",
+      "slug": "presentation-kok-tan",
+      "title": "Présentation du livre K'o'k tan",
+      "shortTitle": "K'o'k tan",
+      "summary": "Présentation d'un album jeunesse en tsotsil-maya et en breton, inspiré de souvenirs d'enfance au Chiapas.",
+      "description": "Maelenn Bernard et Martina Díaz Pérez explorent les souvenirs d'enfance de cette dernière dans deux langues minorées, le tsotsil-maya et le breton. Les aquarelles d'Anna Duval-Guennoc transmettent l'ambiance brumeuse et les couleurs chaudes du Chiapas.",
+      "formatId": "book-presentation",
+      "themeIds": ["literature", "languages", "indigenous-cultures"],
+      "audienceIds": ["all", "families"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "maelenn-bernard", "role": "autrice"},
+        {"contributorId": "martina-diaz-perez", "role": "autrice"},
+        {"contributorId": "anna-duval-guennoc", "role": "illustratrice"}
+      ],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "repas-partage-espagnol",
+      "slug": "repas-partage-espagnol",
+      "title": "Repas partagé en espagnol",
+      "shortTitle": null,
+      "summary": "Repas partagé du midi pour pratiquer l'espagnol.",
+      "description": null,
+      "formatId": "shared-meal",
+      "themeIds": ["languages", "food"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [7, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-calaveritas",
+      "slug": "atelier-calaveritas",
+      "title": "Atelier calaveritas",
+      "shortTitle": null,
+      "summary": "Atelier créatif autour des calaveritas mexicaines.",
+      "description": null,
+      "formatId": "workshop",
+      "themeIds": ["visual-arts", "heritage"],
+      "audienceIds": ["all", "families"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "unknown", "value": null, "label": null},
+      "credits": [],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "lecture-litterature-mexicaine",
+      "slug": "lecture-litterature-mexicaine",
+      "title": "Littérature mexicaine - Lecture à voix haute",
+      "shortTitle": "Lecture à voix haute",
+      "summary": "Lecture de textes d'autrices et auteurs mexicains par l'association Les Arts Singuliers.",
+      "description": "Une découverte des voix qui ont fait et font aujourd'hui la littérature du Mexique.",
+      "formatId": "reading",
+      "themeIds": ["literature"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [{"contributorId": "les-arts-singuliers", "role": "lecture et organisation"}],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [7, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "projection-cosmos",
+      "slug": "projection-cosmos",
+      "title": "Projection du film Cosmos",
+      "shortTitle": "Cosmos",
+      "summary": "Dans un village du Yucatán, la rencontre entre Leon, gardien maya des secrets de la nature, et Lena, femme de lettres venue de Mexico.",
+      "description": "Film mexicain de Germinal Roaux. Dans un village oublié du Yucatán, Leon, gardien maya des secrets de la nature et des esprits, va être chassé de ses terres. Son chemin croise celui de Lena et une connexion profonde se forme entre eux malgré leurs différences.",
+      "formatId": "screening",
+      "themeIds": ["cinema", "indigenous-cultures", "society"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "paid", "details": "Plein 7 €, réduit 6 €, jeune 4 €."},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [{"contributorId": "germinal-roaux", "role": "réalisation"}],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [7, 14]}, {"source": "working-document", "note": "Durée indiquée : 2 h 30."}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "frida-par-frida",
+      "slug": "frida-par-frida",
+      "title": "Lecture théâtralisée Frida par Frida",
+      "shortTitle": "Frida par Frida",
+      "summary": "Lecture théâtralisée proposée par l'association Azimuts.",
+      "description": null,
+      "formatId": "theatrical-reading",
+      "themeIds": ["literature", "theatre", "visual-arts"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [{"contributorId": "azimuts", "role": "organisation"}],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [7, 14, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-fleurs-ofrenda",
+      "slug": "atelier-fleurs-ofrenda",
+      "title": "Atelier créatif Fleurs ofrenda",
+      "shortTitle": "Fleurs ofrenda",
+      "summary": "Atelier créatif consacré aux fleurs d'ofrenda.",
+      "description": null,
+      "formatId": "workshop",
+      "themeIds": ["visual-arts", "heritage"],
+      "audienceIds": ["all", "families"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "unknown", "value": null, "label": null},
+      "credits": [],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-petite-boite-mexicaine",
+      "slug": "atelier-petite-boite-mexicaine",
+      "title": "Atelier petite boîte mexicaine",
+      "shortTitle": "Petite boîte mexicaine",
+      "summary": "Atelier animé par les bénévoles des bibliothèques d'Esquibien et de Primelin.",
+      "description": null,
+      "formatId": "workshop",
+      "themeIds": ["visual-arts", "heritage"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "unknown", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "bibliotheque-esquibien-organisation", "role": "animation"},
+        {"contributorId": "bibliotheque-primelin-organisation", "role": "animation"}
+      ],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [7, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "cafe-apero-espagnol",
+      "slug": "cafe-apero-espagnol",
+      "title": "Café-apéro en espagnol",
+      "shortTitle": null,
+      "summary": "Temps convivial de pratique de l'espagnol.",
+      "description": null,
+      "formatId": "language-cafe",
+      "themeIds": ["languages"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "rencontre-mais-alexis",
+      "slug": "rencontre-mais-alexis",
+      "title": "Rencontre autour du maïs et projection du court métrage Alexis",
+      "shortTitle": "Rencontre maïs et court métrage Alexis",
+      "summary": "Rencontre autour du maïs bleu cultivé en Auvergne à partir de variétés originaires des terres Nahuas du Mexique.",
+      "description": "Alexis a parcouru un long chemin pour acclimater en France un maïs natif des terres Nahuas du Mexique. Ce maïs lui a permis de nourrir son amour pour un pays qu'il a dû fuir à cause de la violence.",
+      "formatId": "meeting",
+      "themeIds": ["food", "cinema", "migration", "indigenous-cultures"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "carlos-perez-rojas", "role": "réalisation du court métrage"},
+        {"contributorId": "graines-de-liberte", "role": "animation"}
+      ],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [7, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "projection-mejk",
+      "slug": "projection-mejk",
+      "title": "Projection du documentaire Mëjk",
+      "shortTitle": "Mëjk",
+      "summary": "Le quotidien de Genaro, instituteur dans un village autochtone du Mexique, pour qui enseigner signifie avant tout partager.",
+      "description": "Documentaire de Carlos Pérez Rojas consacré aux péripéties d'un instituteur d'école primaire dans un village autochtone du Mexique.",
+      "formatId": "screening",
+      "themeIds": ["cinema", "indigenous-cultures", "society"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [{"contributorId": "carlos-perez-rojas", "role": "réalisation"}],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [8, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "projection-hola-frida",
+      "slug": "projection-hola-frida",
+      "title": "Projection du film d'animation Hola Frida",
+      "shortTitle": "Hola Frida",
+      "summary": "Film d'animation sur l'enfance de Frida Kahlo, suivi d'un atelier d'autoportrait.",
+      "description": "Dans le quartier de Coyoacán, une petite fille différente affronte les épreuves grâce à son imaginaire débordant. Cette petite fille s'appelle Frida Kahlo.",
+      "formatId": "screening",
+      "themeIds": ["cinema", "visual-arts"],
+      "audienceIds": ["all", "children", "families"],
+      "ageRange": null,
+      "pricing": {"kind": "paid", "details": "Plein 7 €, réduit 6 €, jeune 4 €."},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "andre-kadi", "role": "réalisation"},
+        {"contributorId": "karine-vezina", "role": "réalisation"}
+      ],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [6, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-creatif-collation-primelin",
+      "slug": "atelier-creatif-collation-primelin",
+      "title": "Atelier créatif et collation",
+      "shortTitle": null,
+      "summary": "Atelier créatif suivi d'une petite collation à la bibliothèque de Primelin.",
+      "description": null,
+      "formatId": "workshop",
+      "themeIds": ["visual-arts"],
+      "audienceIds": ["all", "families"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "unknown", "value": null, "label": null},
+      "credits": [],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-conte-feu",
+      "slug": "atelier-conte-feu",
+      "title": "Atelier conte Feu",
+      "shortTitle": "Feu",
+      "summary": "Atelier pour se raconter, inventer des récits sur le feu, peindre et écrire à partir d'un album situé dans les montagnes du Chiapas.",
+      "description": "À partir de leur album jeunesse Feu, Maelenn Bernard et Martina Díaz Pérez proposent deux heures de récits, de peinture et d'écriture pour créer ensemble une toile pleine d'histoires.",
+      "formatId": "workshop",
+      "themeIds": ["literature", "visual-arts", "indigenous-cultures"],
+      "audienceIds": ["children"],
+      "ageRange": {"minimum": 7, "maximum": 10, "label": "De 7 à 10 ans"},
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": true, "method": "email", "value": "maelenn.bernard@laposte.net", "label": "Inscription par courriel"},
+      "credits": [
+        {"contributorId": "maelenn-bernard", "role": "animation"},
+        {"contributorId": "martina-diaz-perez", "role": "animation"}
+      ],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-creatif-ti-al-leor",
+      "slug": "atelier-creatif-ti-al-leor",
+      "title": "Atelier créatif à Ti Al Leor",
+      "shortTitle": "Atelier créatif",
+      "summary": "Atelier créatif à la bibliothèque Ti Al Leor de Cléden-Cap-Sizun.",
+      "description": null,
+      "formatId": "workshop",
+      "themeIds": ["visual-arts"],
+      "audienceIds": ["all", "families"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": true, "method": "email", "value": "bibliotheque.cledencapsizun@gmail.com", "label": "Inscription par courriel"},
+      "credits": [],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-contes-pinata",
+      "slug": "atelier-contes-pinata",
+      "title": "Atelier contes et piñata",
+      "shortTitle": null,
+      "summary": "Atelier de contes et fabrication ou découverte d'une piñata.",
+      "description": null,
+      "formatId": "workshop",
+      "themeIds": ["literature", "visual-arts", "heritage"],
+      "audienceIds": ["all", "families"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "unknown", "value": null, "label": null},
+      "credits": [{"contributorId": "azimuts", "role": "organisation"}],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-cuisine-mexicaine",
+      "slug": "atelier-cuisine-mexicaine",
+      "title": "Atelier de cuisine mexicaine et repas",
+      "shortTitle": "Cuisine mexicaine et repas",
+      "summary": "Atelier de cuisine mexicaine suivi d'un repas collectif.",
+      "description": null,
+      "formatId": "workshop",
+      "themeIds": ["food", "heritage"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": true, "method": "email", "value": "lepassage@lilo.org", "label": "Inscription par courriel"},
+      "credits": [{"contributorId": "le-passage", "role": "organisation"}],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [6, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "projection-coco",
+      "slug": "projection-coco",
+      "title": "Projection du film d'animation Coco",
+      "shortTitle": "Coco",
+      "summary": "Séance déguisée du film d'animation Coco.",
+      "description": "Miguel rêve de devenir musicien malgré l'interdiction familiale. Propulsé au Pays des Morts, il découvre avec Hector l'histoire cachée de sa famille.",
+      "formatId": "screening",
+      "themeIds": ["cinema", "music", "heritage"],
+      "audienceIds": ["all", "children", "families"],
+      "ageRange": null,
+      "pricing": {"kind": "paid", "details": "Plein 7 €, réduit 6 €, jeune 4 €."},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "lee-unkrich", "role": "réalisation"},
+        {"contributorId": "adrian-molina", "role": "réalisation"}
+      ],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [6, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "matinee-jeux-juegos",
+      "slug": "matinee-jeux-juegos",
+      "title": "Matinée jeux - Juegos",
+      "shortTitle": "Juegos",
+      "summary": "Matinée de jeux à la ludothèque Ti C'hoari.",
+      "description": null,
+      "formatId": "games",
+      "themeIds": ["games-theme", "languages"],
+      "audienceIds": ["all", "families"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "unknown", "value": null, "label": null},
+      "credits": [],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [6, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "marionnettes-an-ti-kamm",
+      "slug": "marionnettes-an-ti-kamm",
+      "title": "Marionnettes An Ti Kamm",
+      "shortTitle": "An Ti Kamm",
+      "summary": "L'histoire d'Alfonso, onze ans, qui doit trouver sa maison avant la fête annuelle des maisons.",
+      "description": "Alfonso vit dans un pays imaginaire évoquant l'Amérique latine des années 1950. Dans sa communauté, tout le monde a une maison dès l'âge de dix ans, mais Alfonso n'a toujours pas rencontré la sienne.",
+      "formatId": "puppet-show",
+      "themeIds": ["theatre", "society"],
+      "audienceIds": ["all", "children", "families"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "unknown", "value": null, "label": null},
+      "credits": [],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [6, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-pan-de-muertos",
+      "slug": "atelier-pan-de-muertos",
+      "title": "Atelier Pan de muertos",
+      "shortTitle": null,
+      "summary": "Atelier de fabrication du pain traditionnel du Día de Muertos avec Mathilde Gaillard.",
+      "description": null,
+      "formatId": "workshop",
+      "themeIds": ["food", "heritage"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": true, "method": "email", "value": "lepassage@lilo.org", "label": "Inscription par courriel"},
+      "credits": [{"contributorId": "mathilde-gaillard", "role": "animation"}],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [6, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "animation-ados",
+      "slug": "animation-ados",
+      "title": "Animation ados",
+      "shortTitle": null,
+      "summary": "Animation destinée aux adolescents à La Obra.",
+      "description": null,
+      "formatId": "workshop",
+      "themeIds": ["visual-arts", "games-theme"],
+      "audienceIds": ["teens"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": true, "method": "email", "value": "jeunesse@laobra.bzh", "label": "Inscription par courriel"},
+      "credits": [{"contributorId": "la-obra", "role": "organisation"}],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [8, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "dia-de-muertos",
+      "slug": "dia-de-muertos",
+      "title": "Día de Muertos",
+      "shortTitle": null,
+      "summary": "Journée de fête avec ofrenda, ateliers créatifs, maquillage, tortillas, restauration et concert.",
+      "description": "Une journée consacrée à l'une des fêtes les plus importantes du Mexique : montage de l'ofrenda de muertos, ateliers créatifs, maquillage, confection de tortillas sur billig, restauration, buvette et concert à la tombée de la nuit.",
+      "formatId": "festival-day",
+      "themeIds": ["heritage", "food", "visual-arts", "music"],
+      "audienceIds": ["all", "families"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [],
+      "featured": true,
+      "sourceRefs": [{"source": "brochure", "pages": [6, 11, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "concert-milelio",
+      "slug": "concert-milelio",
+      "title": "Milelio - La Ceiba, boleros y más",
+      "shortTitle": "Milelio",
+      "summary": "Concert ancré dans les musiques traditionnelles latino-américaines, entre voix et guitare.",
+      "description": "Le répertoire explore les liens familiaux, l'amour, la mémoire et le paysage, en tissant un dialogue sensible entre tradition et vécu.",
+      "formatId": "concert",
+      "themeIds": ["music"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "milena-espinal", "role": "voix"},
+        {"contributorId": "lionel-romieu", "role": "guitare et musique"}
+      ],
+      "featured": true,
+      "sourceRefs": [{"source": "brochure", "pages": [10, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "initiation-zapateado",
+      "slug": "initiation-zapateado",
+      "title": "Initiation au zapateado avec Yesenia García",
+      "shortTitle": "Initiation zapateado",
+      "summary": "Initiation à la danse percussive mexicaine zapateado.",
+      "description": null,
+      "formatId": "dance-class",
+      "themeIds": ["dance", "music", "heritage"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": true, "method": "email", "value": "lepassage@lilo.org", "label": "Inscription par courriel"},
+      "credits": [{"contributorId": "yesenia-garcia-leon", "role": "animation"}],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [10, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "concert-la-selva-canta",
+      "slug": "concert-la-selva-canta",
+      "title": "La Selva Canta",
+      "shortTitle": null,
+      "summary": "Duo mêlant rythmes mexicains, jarana, zapateado et accordéon diatonique.",
+      "description": "La rencontre entre les sonorités du Mexique et les musiques traditionnelles françaises, portée par Yesenia García León et Olivier Catteau.",
+      "formatId": "concert",
+      "themeIds": ["music", "dance"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "yesenia-garcia-leon", "role": "chant, jarana et zapateado"},
+        {"contributorId": "olivier-catteau", "role": "accordéon diatonique"}
+      ],
+      "featured": true,
+      "sourceRefs": [{"source": "brochure", "pages": [10, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "courts-metrages-documentaires",
+      "slug": "courts-metrages-documentaires",
+      "title": "Courts métrages documentaires de San Cristóbal de las Casas",
+      "shortTitle": "Courts métrages documentaires",
+      "summary": "Projection de Le ciel est très joli, Nyanga et Ventre de lune dans le cadre du Mois du documentaire.",
+      "description": "Trois films consacrés aux migrations, à la résistance à l'esclavage colonial et à la maternité dans la cosmovision Tsotsil.",
+      "formatId": "screening",
+      "themeIds": ["cinema", "migration", "indigenous-cultures", "women", "society"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "aracely-mendez", "role": "réalisation de Le ciel est très joli"},
+        {"contributorId": "medhin-tewolde-serrano", "role": "réalisation de Nyanga"},
+        {"contributorId": "liliana-kan", "role": "réalisation de Ventre de lune"},
+        {"contributorId": "escuela-cine-documental-san-cristobal", "role": "école associée"},
+        {"contributorId": "terra-nostra-films", "role": "structure associée"},
+        {"contributorId": "le-passage", "role": "organisation"},
+        {"contributorId": "mediatheque-jeanne-nabert-organisation", "role": "organisation"}
+      ],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [8, 15]}, {"source": "working-document", "note": "Descriptions détaillées des trois films."}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "conte-musical-la-llorona",
+      "slug": "conte-musical-la-llorona",
+      "title": "Conte musical La Llorona",
+      "shortTitle": "La Llorona",
+      "summary": "Conte et chants autour de la Llorona, légende emblématique du Mexique.",
+      "description": null,
+      "formatId": "musical-story",
+      "themeIds": ["theatre", "music", "heritage"],
+      "audienceIds": ["all", "children", "families"],
+      "ageRange": {"minimum": 7, "maximum": null, "label": "À partir de 7 ans"},
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "christine-aube", "role": "conte et chant"},
+        {"contributorId": "jean-baptiste-farraigue", "role": "guitare"},
+        {"contributorId": "dolina", "role": "chant choral"}
+      ],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [6, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "cafe-linguistique",
+      "slug": "cafe-linguistique",
+      "title": "Café linguistique en espagnol",
+      "shortTitle": null,
+      "summary": "Discussions en espagnol et dans d'autres langues, sans niveau requis.",
+      "description": "Un temps d'échange libre et gratuit proposé par Info Jeunes Cap Sizun - Pointe du Raz.",
+      "formatId": "language-cafe",
+      "themeIds": ["languages"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "free", "details": "Libre et gratuit."},
+      "registration": {"required": false, "method": "email", "value": "estelle.leblois@douarnenez-communaute.fr", "label": "Contact d'information"},
+      "credits": [{"contributorId": "info-jeunes-cap-sizun", "role": "organisation"}],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [8, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "rencontre-autrices-mexicaines",
+      "slug": "rencontre-autrices-mexicaines",
+      "title": "À la découverte des autrices mexicaines avec Lise Belperron",
+      "shortTitle": "Autrices mexicaines contemporaines",
+      "summary": "Rencontre sur les autrices contemporaines du Mexique et le travail de traduction de Lise Belperron.",
+      "description": "Autour de l'oeuvre de Dahlia de la Cerda, la rencontre explore la manière dont de nouvelles voix font évoluer les frontières du monde littéraire. Elle est suivie d'un repas partagé, avec la présence de la librairie La Pluie d'été.",
+      "formatId": "meeting",
+      "themeIds": ["literature", "women", "languages"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "lise-belperron", "role": "invitée et traductrice"},
+        {"contributorId": "la-pluie-dete", "role": "librairie partenaire"}
+      ],
+      "featured": true,
+      "sourceRefs": [{"source": "brochure", "pages": [8, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-traduction",
+      "slug": "atelier-traduction",
+      "title": "Atelier de traduction avec Lise Belperron",
+      "shortTitle": "Atelier de traduction",
+      "summary": "Découverte des joies et difficultés de la traduction à partir de trois extraits de Dahlia de la Cerda.",
+      "description": "L'atelier aborde l'oralité, l'argot, le contexte culturel, la fluidité et la compréhension. Aucun prérequis n'est obligatoire.",
+      "formatId": "workshop",
+      "themeIds": ["literature", "languages", "women"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": true, "method": "email", "value": "mediatheque@pont-croix.fr", "label": "Inscription par courriel"},
+      "credits": [{"contributorId": "lise-belperron", "role": "animation"}],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [8, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "jam-cedre-bleu",
+      "slug": "jam-cedre-bleu",
+      "title": "Jam du Cèdre Bleu",
+      "shortTitle": null,
+      "summary": "Session de musique improvisée.",
+      "description": null,
+      "formatId": "jam-session",
+      "themeIds": ["music"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [{"contributorId": "le-cedre-bleu", "role": "organisation"}],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [10, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "animation-enfants-mahalon",
+      "slug": "animation-enfants-mahalon",
+      "title": "Animation pour enfants",
+      "shortTitle": null,
+      "summary": "Animation pour enfants à la bibliothèque de Mahalon.",
+      "description": null,
+      "formatId": "children-activity",
+      "themeIds": ["visual-arts", "games-theme"],
+      "audienceIds": ["children", "families"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "unknown", "value": null, "label": null},
+      "credits": [],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [6, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "concert-ndahi",
+      "slug": "concert-ndahi",
+      "title": "Ndahi - Concert commenté",
+      "shortTitle": "Ndahi",
+      "summary": "Voyage commenté à travers les courants musicaux, les peuples et les régions du Mexique.",
+      "description": "Pablo Paz propose une randonnée musicale à travers polkas, corridos, banda, mariachi, sones abajeños, chilenas, pirekuas, sonorités huastèques et son jarocho.",
+      "formatId": "concert",
+      "themeIds": ["music", "heritage", "indigenous-cultures"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [{"contributorId": "pablo-paz", "role": "musique et présentation"}],
+      "featured": true,
+      "sourceRefs": [{"source": "brochure", "pages": [10, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "rencontre-femmes-mexique",
+      "slug": "rencontre-femmes-mexique",
+      "title": "Rencontre Femmes au Mexique",
+      "shortTitle": null,
+      "summary": "Rencontre croisée sur les migrations, les enseignantes mobilisées et la place des femmes chez les Tsotsils.",
+      "description": "Juliette Danfakha intervient sur la migration des jeunes filles tseltales, Julie Métais sur les maestras et Martina Díaz Pérez sur la place des femmes chez les Tsotsils.",
+      "formatId": "meeting",
+      "themeIds": ["women", "society", "migration", "indigenous-cultures"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "juliette-danfakha", "role": "intervenante"},
+        {"contributorId": "julie-metais", "role": "intervenante"},
+        {"contributorId": "martina-diaz-perez", "role": "intervenante"}
+      ],
+      "featured": true,
+      "sourceRefs": [{"source": "brochure", "pages": [9, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "projection-vanilla",
+      "slug": "projection-vanilla",
+      "title": "Projection du film Vanilla",
+      "shortTitle": "Vanilla",
+      "summary": "Sept femmes se battent pour sauver leur maison, dans un foyer sans père observé à hauteur d'une enfant de huit ans.",
+      "description": "Film mexicain de Mayra Hermosillo avec Natalia Plasencia, Daniela Porras et María Castellá. Durée annoncée : 1 h 35.",
+      "formatId": "screening",
+      "themeIds": ["cinema", "women", "society"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "paid", "details": "Plein 7 €, réduit 6 €."},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [{"contributorId": "mayra-hermosillo", "role": "réalisation"}],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [9, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "presentation-livre-charco",
+      "slug": "presentation-livre-charco",
+      "title": "Présentation du livre De l'autre côté du charco",
+      "shortTitle": "De l'autre côté du charco",
+      "summary": "Récit d'un voyage fait d'allers-retours entre Mexico, le Guerrero, Oaxaca, l'isthme de Tehuantepec et le Chiapas.",
+      "description": "Véro Traba et Patxi Beltzaiz racontent un Mexique vivant qui résiste et construit, au fil de rencontres avec des communautés et de moments importants de la vie collective.",
+      "formatId": "book-presentation",
+      "themeIds": ["literature", "photography", "indigenous-cultures", "society"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "vero-traba", "role": "autrice"},
+        {"contributorId": "patxi-beltzaiz", "role": "photographe"}
+      ],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [9, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "visite-danza-diablos",
+      "slug": "visite-danza-diablos",
+      "title": "Visite guidée de l'exposition La danza de los diablos",
+      "shortTitle": "Visite de La danza de los diablos",
+      "summary": "Visite guidée avec Patxi Beltzaiz et Véro Traba.",
+      "description": null,
+      "formatId": "guided-tour",
+      "themeIds": ["photography", "heritage", "society"],
+      "audienceIds": ["teens", "adults"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "patxi-beltzaiz", "role": "guide et photographe"},
+        {"contributorId": "vero-traba", "role": "guide et autrice"}
+      ],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [9, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "cloture-chillipili",
+      "slug": "cloture-chillipili",
+      "title": "Soirée de clôture avec Chillipili Sound System",
+      "shortTitle": "Chillipili Sound System",
+      "summary": "DJ-sonidero mêlant musiques traditionnelles, électronique et rythmes éclectiques pour danser.",
+      "description": "Un mélange épicé de musiques traditionnelles et électroniques pour clôturer Curieux Mexique.",
+      "formatId": "concert",
+      "themeIds": ["music", "dance"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [],
+      "featured": true,
+      "sourceRefs": [{"source": "brochure", "pages": [10, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "fotografas-vida-cotidiana",
+      "slug": "fotografas-vida-cotidiana",
+      "title": "Fotógrafas de la vida cotidiana",
+      "shortTitle": "Mexican Women Photographers",
+      "summary": "Parcours photographique présentant dans plusieurs lieux une sélection de photographies réalisées par des femmes mexicaines.",
+      "description": "Mexican Women Photographers rassemble des femmes mexicaines pratiquant la photographie de rue et documentaire. L'exposition montre la diversité des regards et la richesse culturelle des racines de ses participantes, sous la forme d'un parcours réparti dans le Cap-Sizun.",
+      "formatId": "exhibition",
+      "themeIds": ["photography", "women", "society"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "sunny-quintero", "role": "fondatrice et commissariat"},
+        {"contributorId": "mexican-women-photographers", "role": "collectif exposé"}
+      ],
+      "featured": true,
+      "sourceRefs": [{"source": "brochure", "pages": [3, 4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "de-phare-en-lumiere",
+      "slug": "de-phare-en-lumiere",
+      "title": "De phare en lumière - Le regard de Ramiro Chaves",
+      "shortTitle": "De phare en lumière",
+      "summary": "Exposition photographique sur les liens entre paysage, lumière et territoire.",
+      "description": "Photographe argentin installé au Mexique, Ramiro Chaves développe une oeuvre attentive au paysage, à la lumière et au territoire.",
+      "formatId": "exhibition",
+      "themeIds": ["photography", "heritage"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "ramiro-chaves", "role": "photographe"},
+        {"contributorId": "maison-phare-du-millier", "role": "partenaire de l'exposition"}
+      ],
+      "featured": true,
+      "sourceRefs": [{"source": "brochure", "pages": [4, 11]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "exposition-sonore-vie-ville-sons",
+      "slug": "exposition-sonore-vie-ville-sons",
+      "title": "La vie, la ville et ses sons",
+      "shortTitle": "Exposition sonore",
+      "summary": "Voyage sonore itinérant dans les médiathèques, bibliothèques et écoles du Cap-Sizun.",
+      "description": "L'association Écoute, on apprend ! propose de s'immerger dans des univers lointains pour se sentir plus près.",
+      "formatId": "exhibition",
+      "themeIds": ["sound", "society"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [{"contributorId": "ecoute-on-apprend", "role": "conception et itinérance"}],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "exposition-art-wixarika",
+      "slug": "exposition-art-wixarika",
+      "title": "Exposition d'art Wixárika-Huichol",
+      "shortTitle": "Art Wixárika-Huichol",
+      "summary": "Tableaux de fils de laine et broderies liés à la tradition spirituelle des Wixáritari.",
+      "description": "Dans l'art wixárika, chaque objet est un récit. Les tableaux de fils de laine collés sur de la cire d'abeille et les broderies représentent des visions, des rêves et des messages des dieux.",
+      "formatId": "exhibition",
+      "themeIds": ["visual-arts", "indigenous-cultures", "heritage"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [],
+      "featured": false,
+      "sourceRefs": [{"source": "brochure", "pages": [4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "exposition-danza-diablos",
+      "slug": "exposition-danza-diablos",
+      "title": "La danza de los diablos",
+      "shortTitle": null,
+      "summary": "Série photographique sur une tradition de la Costa Chica du Guerrero qui affirme l'héritage afro-mexicain.",
+      "description": "Cette série tirée du livre De l'autre côté du charco montre une tradition séculaire pendant laquelle les diables dansent durant deux jours, revendiquant l'héritage des ancêtres afro-mexicains.",
+      "formatId": "exhibition",
+      "themeIds": ["photography", "heritage", "society"],
+      "audienceIds": ["all"],
+      "ageRange": null,
+      "pricing": {"kind": "unknown", "details": null},
+      "registration": {"required": false, "method": "none", "value": null, "label": null},
+      "credits": [
+        {"contributorId": "patxi-beltzaiz", "role": "photographe"},
+        {"contributorId": "vero-traba", "role": "autrice du livre associé"}
+      ],
+      "featured": true,
+      "sourceRefs": [{"source": "brochure", "pages": [4, 9]}],
+      "review": {"status": "confirmed", "notes": []}
+    }
+  ],
+  "sessions": [
+    {
+      "id": "inauguration-2026-10-01-1730",
+      "eventId": "inauguration-curieux-mexique",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-01T17:30:00+02:00", "endsAt": null},
+      "venueId": "maison-site-pointe-du-raz",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [11, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "kok-tan-2026-10-04-1500",
+      "eventId": "presentation-kok-tan",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-04T15:00:00+02:00", "endsAt": null},
+      "venueId": "la-pointe-emmaus-primelin",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "kok-tan-2026-10-23-1100",
+      "eventId": "presentation-kok-tan",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-23T11:00:00+02:00", "endsAt": null},
+      "venueId": "le-passage-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "repas-espagnol-2026-10-05-1200",
+      "eventId": "repas-partage-espagnol",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-05T12:00:00+02:00", "endsAt": "2026-10-05T13:30:00+02:00"},
+      "venueId": "le-passage-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [7, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "calaveritas-2026-10-09-1700",
+      "eventId": "atelier-calaveritas",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-09T17:00:00+02:00", "endsAt": null},
+      "venueId": "le-passage-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "lecture-litterature-2026-10-09-1800",
+      "eventId": "lecture-litterature-mexicaine",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-09T18:00:00+02:00", "endsAt": null},
+      "venueId": "mediatheque-jeanne-nabert",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [7, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "cosmos-2026-10-10-1700",
+      "eventId": "projection-cosmos",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-10T17:00:00+02:00", "endsAt": "2026-10-10T19:30:00+02:00"},
+      "venueId": "cinema-le-goyen",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["Heure de fin calculée à partir de la durée de 2 h 30 indiquée dans le document de travail."],
+      "sourceRefs": [{"source": "brochure", "pages": [7, 14]}, {"source": "working-document", "note": "Durée de 2 h 30."}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "frida-par-frida-2026-10-11-1700",
+      "eventId": "frida-par-frida",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-11T17:00:00+02:00", "endsAt": null},
+      "venueId": "salle-polyvalente-primelin",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [7, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "frida-par-frida-2026-11-22-1700",
+      "eventId": "frida-par-frida",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-22T17:00:00+01:00", "endsAt": null},
+      "venueId": "salle-polyvalente-primelin",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [7, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "fleurs-ofrenda-2026-10-14-1000",
+      "eventId": "atelier-fleurs-ofrenda",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-14T10:00:00+02:00", "endsAt": "2026-10-14T12:00:00+02:00"},
+      "venueId": "bibliotheque-mahalon",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "petite-boite-2026-10-14-1600",
+      "eventId": "atelier-petite-boite-mexicaine",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-14T16:00:00+02:00", "endsAt": null},
+      "venueId": "bibliotheque-primelin",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [7, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "petite-boite-2026-10-16-1800",
+      "eventId": "atelier-petite-boite-mexicaine",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-16T18:00:00+02:00", "endsAt": null},
+      "venueId": "bibliotheque-primelin",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [7, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "cafe-apero-2026-10-16-1700",
+      "eventId": "cafe-apero-espagnol",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-16T17:00:00+02:00", "endsAt": "2026-10-16T18:30:00+02:00"},
+      "venueId": "le-passage-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "alexis-2026-10-16-1800",
+      "eventId": "rencontre-mais-alexis",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-16T18:00:00+02:00", "endsAt": null},
+      "venueId": "le-passage-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [7, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "mejk-2026-10-17-1500",
+      "eventId": "projection-mejk",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-17T15:00:00+02:00", "endsAt": null},
+      "venueId": "maison-site-pointe-du-raz",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [8, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "hola-frida-2026-10-20-1430",
+      "eventId": "projection-hola-frida",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-20T14:30:00+02:00", "endsAt": null},
+      "venueId": "cinema-le-goyen",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["La projection est suivie d'un atelier d'autoportrait."],
+      "sourceRefs": [{"source": "brochure", "pages": [6, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-primelin-2026-10-21-1500",
+      "eventId": "atelier-creatif-collation-primelin",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-21T15:00:00+02:00", "endsAt": null},
+      "venueId": "bibliotheque-primelin",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-primelin-2026-10-28-1500",
+      "eventId": "atelier-creatif-collation-primelin",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-28T15:00:00+01:00", "endsAt": null},
+      "venueId": "bibliotheque-primelin",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [5]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-feu-2026-10-23-1500",
+      "eventId": "atelier-conte-feu",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-23T15:00:00+02:00", "endsAt": "2026-10-23T17:00:00+02:00"},
+      "venueId": "le-passage-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-ti-al-leor-2026-10-24-1000",
+      "eventId": "atelier-creatif-ti-al-leor",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-24T10:00:00+02:00", "endsAt": "2026-10-24T11:30:00+02:00"},
+      "venueId": "bibliotheque-ti-al-leor",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-ti-al-leor-2026-10-28-1500",
+      "eventId": "atelier-creatif-ti-al-leor",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-28T15:00:00+01:00", "endsAt": "2026-10-28T17:00:00+01:00"},
+      "venueId": "bibliotheque-ti-al-leor",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "contes-pinata-2026-10-24-1500",
+      "eventId": "atelier-contes-pinata",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-24T15:00:00+02:00", "endsAt": null},
+      "venueId": "bibliotheque-primelin",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [5, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "contes-pinata-2026-11-14-1500",
+      "eventId": "atelier-contes-pinata",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-14T15:00:00+01:00", "endsAt": null},
+      "venueId": "bibliotheque-primelin",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [5, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "cuisine-mexicaine-2026-10-26-1000",
+      "eventId": "atelier-cuisine-mexicaine",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-26T10:00:00+01:00", "endsAt": "2026-10-26T12:00:00+01:00"},
+      "venueId": "le-passage-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [6, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "coco-2026-10-28-1430",
+      "eventId": "projection-coco",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-28T14:30:00+01:00", "endsAt": null},
+      "venueId": "cinema-le-goyen",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["Séance déguisée."],
+      "sourceRefs": [{"source": "brochure", "pages": [6, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "juegos-2026-10-29-1000",
+      "eventId": "matinee-jeux-juegos",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-29T10:00:00+01:00", "endsAt": null},
+      "venueId": "ludotheque-ti-choari",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [6, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "an-ti-kamm-2026-10-30-1100",
+      "eventId": "marionnettes-an-ti-kamm",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-30T11:00:00+01:00", "endsAt": null},
+      "venueId": "theatre-georges-madec",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [6, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "pan-de-muertos-2026-10-30-1330",
+      "eventId": "atelier-pan-de-muertos",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-30T13:30:00+01:00", "endsAt": "2026-10-30T18:00:00+01:00"},
+      "venueId": "fournil-pain-dans-le-jardin",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [6, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "animation-ados-2026-10-30-1400",
+      "eventId": "animation-ados",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-30T14:00:00+01:00", "endsAt": null},
+      "venueId": "la-obra-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [8, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "dia-de-muertos-2026-10-31-1400",
+      "eventId": "dia-de-muertos",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-31T14:00:00+01:00", "endsAt": null},
+      "venueId": "espace-culturel-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["Début à 14 h, fin non précisée."],
+      "sourceRefs": [{"source": "brochure", "pages": [6, 11, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "milelio-2026-10-31-2000",
+      "eventId": "concert-milelio",
+      "timing": {"kind": "scheduled", "startsAt": "2026-10-31T20:00:00+01:00", "endsAt": null},
+      "venueId": "espace-culturel-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["La brochure finale place le concert à l'Espace culturel."],
+      "sourceRefs": [{"source": "brochure", "pages": [10, 14]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "zapateado-2026-11-05-1700",
+      "eventId": "initiation-zapateado",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-05T17:00:00+01:00", "endsAt": null},
+      "venueId": "le-passage-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [10, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "la-selva-canta-2026-11-05-1900",
+      "eventId": "concert-la-selva-canta",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-05T19:00:00+01:00", "endsAt": null},
+      "venueId": "le-cedre-bleu-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["La brochure finale place le concert au Cèdre Bleu."],
+      "sourceRefs": [{"source": "brochure", "pages": [10, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "courts-metrages-2026-11-06-1800",
+      "eventId": "courts-metrages-documentaires",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-06T18:00:00+01:00", "endsAt": null},
+      "venueId": "espace-culturel-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["Séance organisée dans le cadre du Mois du documentaire."],
+      "sourceRefs": [{"source": "brochure", "pages": [8, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "la-llorona-2026-11-07-1530",
+      "eventId": "conte-musical-la-llorona",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-07T15:30:00+01:00", "endsAt": null},
+      "venueId": "mediatheque-jeanne-nabert",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [6, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "cafe-linguistique-2026-11-10-1730",
+      "eventId": "cafe-linguistique",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-10T17:30:00+01:00", "endsAt": "2026-11-10T19:30:00+01:00"},
+      "venueId": "bar-la-renverse",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [8, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "autrices-mexicaines-2026-11-13-1830",
+      "eventId": "rencontre-autrices-mexicaines",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-13T18:30:00+01:00", "endsAt": null},
+      "venueId": "le-passage-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["La rencontre est suivie d'un repas partagé."],
+      "sourceRefs": [{"source": "brochure", "pages": [8, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "atelier-traduction-2026-11-14-1000",
+      "eventId": "atelier-traduction",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-14T10:00:00+01:00", "endsAt": null},
+      "venueId": "mediatheque-jeanne-nabert",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [8, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "jam-cedre-bleu-2026-11-14-1800",
+      "eventId": "jam-cedre-bleu",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-14T18:00:00+01:00", "endsAt": null},
+      "venueId": "le-cedre-bleu-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["Début à 18 h, fin non précisée."],
+      "sourceRefs": [{"source": "brochure", "pages": [10, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "animation-enfants-2026-11-18-1000",
+      "eventId": "animation-enfants-mahalon",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-18T10:00:00+01:00", "endsAt": "2026-11-18T12:00:00+01:00"},
+      "venueId": "bibliotheque-mahalon",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [6, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "ndahi-2026-11-20-1900",
+      "eventId": "concert-ndahi",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-20T19:00:00+01:00", "endsAt": null},
+      "venueId": "cite-musicale-le-phare",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [10, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "femmes-mexique-2026-11-21-1500",
+      "eventId": "rencontre-femmes-mexique",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-21T15:00:00+01:00", "endsAt": null},
+      "venueId": "maison-site-pointe-du-raz",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [9, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "vanilla-2026-11-24-2030",
+      "eventId": "projection-vanilla",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-24T20:30:00+01:00", "endsAt": "2026-11-24T22:05:00+01:00"},
+      "venueId": "cinema-le-goyen",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["Heure de fin calculée à partir de la durée de 1 h 35."],
+      "sourceRefs": [{"source": "brochure", "pages": [9, 15]}, {"source": "working-document", "note": "Durée de 1 h 35."}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "charco-2026-11-26-1800",
+      "eventId": "presentation-livre-charco",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-26T18:00:00+01:00", "endsAt": null},
+      "venueId": "le-passage-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [9, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "visite-diablos-2026-11-27-1800",
+      "eventId": "visite-danza-diablos",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-27T18:00:00+01:00", "endsAt": null},
+      "venueId": "mediatheque-jeanne-nabert",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [9, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "chillipili-2026-11-27-2000",
+      "eventId": "cloture-chillipili",
+      "timing": {"kind": "scheduled", "startsAt": "2026-11-27T20:00:00+01:00", "endsAt": null},
+      "venueId": "le-cedre-bleu-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [10, 15]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "fotografas-esquibien-2026",
+      "eventId": "fotografas-vida-cotidiana",
+      "timing": {"kind": "date-range", "startsOn": "2026-10-01", "endsOn": "2026-11-30"},
+      "venueId": "bibliotheque-esquibien",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["Une sélection propre à ce lieu est annoncée, sans détail des oeuvres."],
+      "sourceRefs": [{"source": "brochure", "pages": [3, 4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "fotografas-pont-croix-2026",
+      "eventId": "fotografas-vida-cotidiana",
+      "timing": {"kind": "date-range", "startsOn": "2026-10-01", "endsOn": "2026-11-30"},
+      "venueId": "mediatheque-jeanne-nabert",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["Une sélection propre à ce lieu est annoncée, sans détail des oeuvres."],
+      "sourceRefs": [{"source": "brochure", "pages": [3, 4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "fotografas-mahalon-2026",
+      "eventId": "fotografas-vida-cotidiana",
+      "timing": {"kind": "date-range", "startsOn": "2026-10-01", "endsOn": "2026-11-30"},
+      "venueId": "bibliotheque-mahalon",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["Une sélection propre à ce lieu est annoncée, sans détail des oeuvres."],
+      "sourceRefs": [{"source": "brochure", "pages": [3, 4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "fotografas-primelin-2026",
+      "eventId": "fotografas-vida-cotidiana",
+      "timing": {"kind": "date-range", "startsOn": "2026-10-01", "endsOn": "2026-11-30"},
+      "venueId": "bibliotheque-primelin",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["Une sélection propre à ce lieu est annoncée, sans détail des oeuvres."],
+      "sourceRefs": [{"source": "brochure", "pages": [3, 4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "fotografas-plogoff-2026",
+      "eventId": "fotografas-vida-cotidiana",
+      "timing": {"kind": "date-range", "startsOn": "2026-10-01", "endsOn": "2026-11-30"},
+      "venueId": "bibliotheque-plogoff",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["Une sélection propre à ce lieu est annoncée, sans détail des oeuvres."],
+      "sourceRefs": [{"source": "brochure", "pages": [3, 4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "fotografas-cleden-2026",
+      "eventId": "fotografas-vida-cotidiana",
+      "timing": {"kind": "date-range", "startsOn": "2026-10-01", "endsOn": "2026-11-30"},
+      "venueId": "bibliotheque-ti-al-leor",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["Une sélection propre à ce lieu est annoncée, sans détail des oeuvres."],
+      "sourceRefs": [{"source": "brochure", "pages": [3, 4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "fotografas-le-passage-2026",
+      "eventId": "fotografas-vida-cotidiana",
+      "timing": {"kind": "date-range", "startsOn": "2026-10-01", "endsOn": "2026-11-30"},
+      "venueId": "le-passage-pont-croix",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["Une sélection propre à ce lieu est annoncée, sans détail des oeuvres."],
+      "sourceRefs": [{"source": "brochure", "pages": [3, 4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "fotografas-pointe-du-raz-2026",
+      "eventId": "fotografas-vida-cotidiana",
+      "timing": {"kind": "date-range", "startsOn": "2026-10-01", "endsOn": "2026-11-30"},
+      "venueId": "maison-site-pointe-du-raz",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["Une sélection propre à ce lieu est annoncée, sans détail des oeuvres."],
+      "sourceRefs": [{"source": "brochure", "pages": [3, 4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "ramiro-chaves-2026",
+      "eventId": "de-phare-en-lumiere",
+      "timing": {"kind": "date-range", "startsOn": "2026-10-01", "endsOn": "2026-11-01"},
+      "venueId": "maison-site-pointe-du-raz",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [4, 11]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "exposition-sonore-2026",
+      "eventId": "exposition-sonore-vie-ville-sons",
+      "timing": {"kind": "date-range", "startsOn": "2026-10-01", "endsOn": "2026-11-30"},
+      "venueId": "territoire-cap-sizun",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["La plage complète de l'édition est utilisée pour représenter la mention Octobre et novembre."],
+      "sourceRefs": [{"source": "brochure", "pages": [4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "art-wixarika-2026",
+      "eventId": "exposition-art-wixarika",
+      "timing": {"kind": "date-range", "startsOn": "2026-10-01", "endsOn": "2026-11-30"},
+      "venueId": "bibliotheque-primelin",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["La plage complète de l'édition est utilisée pour représenter la mention Octobre et novembre."],
+      "sourceRefs": [{"source": "brochure", "pages": [4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "danza-diablos-emmaus-2026",
+      "eventId": "exposition-danza-diablos",
+      "timing": {"kind": "date-range", "startsOn": "2026-10-01", "endsOn": "2026-11-06"},
+      "venueId": "la-pointe-emmaus-primelin",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": [],
+      "sourceRefs": [{"source": "brochure", "pages": [4]}],
+      "review": {"status": "confirmed", "notes": []}
+    },
+    {
+      "id": "danza-diablos-mediatheque-2026",
+      "eventId": "exposition-danza-diablos",
+      "timing": {"kind": "date-range", "startsOn": "2026-11-09", "endsOn": "2026-11-27"},
+      "venueId": "mediatheque-jeanne-nabert",
+      "timezone": "Europe/Paris",
+      "status": "scheduled",
+      "notes": ["La brochure finale indique une fin le 27 novembre, jour de la visite guidée."],
+      "sourceRefs": [{"source": "brochure", "pages": [4, 9]}],
+      "review": {"status": "confirmed", "notes": []}
+    }
+  ]
+}
