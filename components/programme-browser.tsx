@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import { ArrowUpRight, MapPin, Search, X } from 'lucide-react';
+import { MapPin, Search, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { NativeSelect, NativeSelectOption } from '@/components/ui/native-select';
@@ -125,17 +125,13 @@ export function ProgrammeBrowser({
                   <span><MapPin aria-hidden="true" /> {item.venueName} · {item.venueLocality}</span>
                 </div>
               </div>
-              <Link href={`/evenements/${item.slug}/`} className="programme-arrow" aria-label={`Voir ${item.title}`}>
-                <ArrowUpRight aria-hidden="true" />
-              </Link>
             </article>
           ))}
         </div>
       ) : (
         <div className="empty-state">
-          <p className="eyebrow">Aucun résultat</p>
-          <h2>Essayez un autre filtre</h2>
-          <Button type="button" onClick={resetFilters} className="primary-action">Afficher tout</Button>
+          <h2>Aucun rendez-vous</h2>
+          <Button type="button" onClick={resetFilters} className="primary-action">Réinitialiser</Button>
         </div>
       )}
     </div>

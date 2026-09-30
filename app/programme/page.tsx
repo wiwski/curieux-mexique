@@ -56,10 +56,8 @@ export default function ProgrammePage() {
       <div className="top-pattern pattern-blue" aria-hidden="true" />
       <div className="page-shell">
         <SiteHeader />
-        <header className="page-intro">
-          <p className="eyebrow">Octobre — novembre 2026</p>
+        <header className="page-intro page-intro-compact">
           <h1>Le programme</h1>
-          <p>Composez votre parcours parmi les rendez-vous proposés dans tout le Cap-Sizun.</p>
         </header>
         <ProgrammeBrowser items={items} themes={programme.themes} />
         <SiteFooter />

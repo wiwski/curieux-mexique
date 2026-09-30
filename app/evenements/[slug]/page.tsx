@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, CalendarDays, ExternalLink, MapPin, Ticket } from 'lucide-react';
+import { CalendarDays, MapPin, Ticket } from 'lucide-react';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import {
@@ -50,7 +50,7 @@ export default async function EventPage({ params }: Props) {
       <div className="page-shell">
         <SiteHeader />
         <article className="event-detail">
-          <Link href="/programme/" className="back-link"><ArrowLeft aria-hidden="true" /> Retour au programme</Link>
+          <Link href="/programme/" className="back-link">Retour au programme</Link>
           <div className="event-detail-grid">
             <header className="event-detail-header">
               <p className="eyebrow">{format?.label ?? event.formatId}</p>
@@ -69,7 +69,7 @@ export default async function EventPage({ params }: Props) {
                   <div key={session.id} className="practical-session">
                     <p><CalendarDays aria-hidden="true" /><strong>{formatSessionDate(session)}</strong></p>
                     {venue ? (
-                      <p><MapPin aria-hidden="true" /><span>{venue.name}<small>{venueAddress(venue)}</small></span></p>
+                      <p><MapPin aria-hidden="true" /><span><Link href={`/lieux/#lieu-${venue.id}`}>{venue.name}</Link><small>{venueAddress(venue)}</small></span></p>
                     ) : null}
                   </div>
                 );
@@ -79,7 +79,7 @@ export default async function EventPage({ params }: Props) {
               ) : null}
               {event.registration.required && event.registration.value ? (
                 <a className="registration-link" href={event.registration.method === 'email' ? `mailto:${event.registration.value}` : event.registration.value}>
-                  {event.registration.label ?? 'S’inscrire'} <ExternalLink aria-hidden="true" />
+                  {event.registration.label ?? 'S’inscrire'}
                 </a>
               ) : null}
             </aside>

@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, CalendarDays, MapPinned } from 'lucide-react';
 import { EventCard } from '@/components/event-card';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
@@ -23,28 +22,17 @@ export default function Home() {
             <h1 id="hero-title">Curieux<span>Mexique</span></h1>
             <p className="hero-lead">
               Deux mois pour découvrir le Mexique par la photographie, la
-              musique, la littérature, le cinéma et les arts vivants.
+              musique, la littérature, le cinéma et les arts vivants, d’octobre
+              à novembre 2026 dans le Cap-Sizun.
             </p>
             <div className="hero-actions">
               <Button size="lg" className="primary-action" nativeButton={false} render={<Link href="/programme/" />}>
-                Voir le programme <ArrowRight aria-hidden="true" />
+                Programme
               </Button>
               <Button size="lg" variant="outline" className="secondary-action" nativeButton={false} render={<Link href="/lieux/" />}>
-                Explorer les lieux
+                Carte des lieux
               </Button>
             </div>
-            <dl className="hero-facts">
-              <div>
-                <CalendarDays aria-hidden="true" />
-                <dt>Quand</dt>
-                <dd>Octobre — novembre 2026</dd>
-              </div>
-              <div>
-                <MapPinned aria-hidden="true" />
-                <dt>Où</dt>
-                <dd>Cap-Sizun · Pointe du Raz</dd>
-              </div>
-            </dl>
           </div>
 
           <figure className="poster-wrap">
@@ -63,10 +51,10 @@ export default function Home() {
         <section className="upcoming" aria-labelledby="upcoming-title">
           <div className="section-heading">
             <div>
-              <h2 id="upcoming-title">Les premiers rendez-vous</h2>
+              <h2 id="upcoming-title">Programme</h2>
             </div>
             <Link href="/programme/" className="text-link">
-              Tout le programme <ArrowRight aria-hidden="true" />
+              Tout voir
             </Link>
           </div>
           <div className="event-grid">

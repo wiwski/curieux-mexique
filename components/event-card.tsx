@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import type { Event, Session } from '@/lib/programme';
 import { formatSessionDate, formatsById, sessionDayParts, venuesById } from '@/lib/programme';
 
@@ -25,9 +25,6 @@ export function EventCard({ event, session }: { event: Event; session: Session }
           </p>
         ) : null}
       </div>
-      <Link href={`/evenements/${event.slug}/`} className="event-arrow" aria-label={`Voir ${event.title}`}>
-        <ArrowUpRight aria-hidden="true" />
-      </Link>
     </article>
   );
 }

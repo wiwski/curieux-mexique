@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Menu } from 'lucide-react';
+import { CalendarDays } from 'lucide-react';
 
 export function SiteHeader() {
   return (
@@ -8,7 +8,6 @@ export function SiteHeader() {
         <span className="brand-mark" aria-hidden="true">CM</span>
         <span>
           <strong>Curieux Mexique</strong>
-          <small>Cap-Sizun · 2026</small>
         </span>
       </Link>
       <nav className="desktop-nav" aria-label="Navigation principale">
@@ -16,8 +15,8 @@ export function SiteHeader() {
         <Link href="/lieux/">Lieux</Link>
         <a href="mailto:curieuxmexique@lilo.org">Contact</a>
       </nav>
-      <Link className="mobile-menu" href="/programme/" aria-label="Ouvrir le programme">
-        <Menu aria-hidden="true" />
+      <Link className="mobile-menu" href="/programme/" aria-label="Programme">
+        <CalendarDays aria-hidden="true" />
       </Link>
     </header>
   );

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
 import { SiteHeader } from '@/components/site-header';
 
 export default function NotFound() {
@@ -10,9 +9,8 @@ export default function NotFound() {
         <SiteHeader />
         <section className="not-found">
           <p className="eyebrow">Erreur 404</p>
-          <h1>Cette page s’est égarée</h1>
-          <p>Le programme, lui, est toujours bien là.</p>
-          <Link href="/programme/" className="registration-link"><ArrowLeft aria-hidden="true" /> Voir le programme</Link>
+          <h1>Page introuvable</h1>
+          <Link href="/programme/" className="registration-link">Programme</Link>
         </section>
       </div>
     </main>

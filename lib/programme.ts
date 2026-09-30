@@ -13,6 +13,7 @@ export type Venue = {
   name: string;
   kind: string;
   address: Address;
+  geo: { latitude: number; longitude: number } | null;
   website: string | null;
   notes: string[];
 };

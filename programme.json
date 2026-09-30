@@ -237,7 +237,10 @@
         "locality": "Plogoff",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.0365126,
+        "longitude": -4.7178909
+      },
       "website": "https://www.pointeduraz.com/",
       "notes": [
         "Le programme mentionne également la forme courte Maison du Site."
@@ -268,7 +271,10 @@
         "locality": "Primelin",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.0300535,
+        "longitude": -4.6164922
+      },
       "website": "https://www.cap-sizun.bzh/contacts/la-pointe-emmaus/",
       "notes": [],
       "sourceRefs": [
@@ -297,7 +303,10 @@
         "locality": "Pont-Croix",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.0407541,
+        "longitude": -4.4908249
+      },
       "website": null,
       "notes": [],
       "sourceRefs": [
@@ -322,7 +331,10 @@
         "locality": "Pont-Croix",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.0417513,
+        "longitude": -4.4885729
+      },
       "website": null,
       "notes": [],
       "sourceRefs": [
@@ -372,7 +384,10 @@
         "locality": "Primelin",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.0262112,
+        "longitude": -4.6113154
+      },
       "website": null,
       "notes": [],
       "sourceRefs": [
@@ -397,7 +412,10 @@
         "locality": "Esquibien - Audierne",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.024452,
+        "longitude": -4.5605474
+      },
       "website": null,
       "notes": [],
       "sourceRefs": [
@@ -422,7 +440,10 @@
         "locality": "Plogoff",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.037091,
+        "longitude": -4.6689013
+      },
       "website": null,
       "notes": [],
       "sourceRefs": [
@@ -447,7 +468,10 @@
         "locality": "Cléden-Cap-Sizun",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.0479576,
+        "longitude": -4.6491069
+      },
       "website": null,
       "notes": [],
       "sourceRefs": [
@@ -472,7 +496,10 @@
         "locality": "Audierne",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.0220531,
+        "longitude": -4.5388937
+      },
       "website": null,
       "notes": [],
       "sourceRefs": [
@@ -501,7 +528,10 @@
         "locality": "Esquibien - Audierne",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.0244734,
+        "longitude": -4.5634512
+      },
       "website": null,
       "notes": [],
       "sourceRefs": [
@@ -555,7 +585,10 @@
         "locality": "Pont-Croix",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.0417305,
+        "longitude": -4.4893092
+      },
       "website": "https://www.pont-croix.fr/vivre-a-pont-croix/enfance-pont-croix/",
       "notes": [],
       "sourceRefs": [
@@ -584,7 +617,10 @@
         "locality": "Pont-Croix",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.041219,
+        "longitude": -4.488743
+      },
       "website": "https://laobra.bzh/",
       "notes": [],
       "sourceRefs": [
@@ -613,7 +649,10 @@
         "locality": "Audierne",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.0176534,
+        "longitude": -4.5378511
+      },
       "website": "https://la-renverse-bar-audierne.eatbu.com/?lang=fr",
       "notes": [],
       "sourceRefs": [
@@ -642,7 +681,10 @@
         "locality": "Pont-Croix",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.0409804,
+        "longitude": -4.4861498
+      },
       "website": "https://lepharepontcroix.com/",
       "notes": [],
       "sourceRefs": [
@@ -671,7 +713,10 @@
         "locality": "Pont-Croix",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.0423254,
+        "longitude": -4.48763
+      },
       "website": "https://lecedrebleu-px.fr/",
       "notes": [],
       "sourceRefs": [
@@ -700,7 +745,10 @@
         "locality": "Primelin",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.0259895,
+        "longitude": -4.6112416
+      },
       "website": "https://primelin.fr/reservation-salle/",
       "notes": [],
       "sourceRefs": [
@@ -729,7 +777,10 @@
         "locality": "Pont-Croix",
         "countryCode": "FR"
       },
-      "geo": null,
+      "geo": {
+        "latitude": 48.041219,
+        "longitude": -4.488743
+      },
       "website": "https://laobra.bzh/ludotheque/la-ludotheque-ti-choari-cest-quoi",
       "notes": [],
       "sourceRefs": [
