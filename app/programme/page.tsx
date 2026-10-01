@@ -6,6 +6,7 @@ import {
   eventsById,
   formatSessionDate,
   formatsById,
+  monthsForSession,
   orderedSessions,
   programme,
   sessionDayParts,
@@ -16,13 +17,6 @@ export const metadata: Metadata = {
   title: 'Programme',
   description: 'Tous les rendez-vous de Curieux Mexique 2026, filtrables par mois et par thème.',
 };
-
-function monthsForSession(session: (typeof orderedSessions)[number]) {
-  if (session.timing.kind === 'scheduled') return [session.timing.startsAt.slice(5, 7)];
-  const start = Number(session.timing.startsOn.slice(5, 7));
-  const end = Number(session.timing.endsOn.slice(5, 7));
-  return Array.from({ length: end - start + 1 }, (_, index) => String(start + index).padStart(2, '0'));
-}
 
 export default function ProgrammePage() {
   const items: ProgrammeItem[] = orderedSessions.flatMap((session) => {

@@ -109,6 +109,16 @@ export function sessionsForEvent(eventId: string) {
   return orderedSessions.filter((session) => session.eventId === eventId);
 }
 
+export function monthsForSession(session: Session) {
+  if (session.timing.kind === 'scheduled') return [session.timing.startsAt.slice(5, 7)];
+  const start = Number(session.timing.startsOn.slice(5, 7));
+  const end = Number(session.timing.endsOn.slice(5, 7));
+  return Array.from(
+    { length: end - start + 1 },
+    (_, index) => String(start + index).padStart(2, '0'),
+  );
+}
+
 const fullDate = new Intl.DateTimeFormat('fr-FR', {
   weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Paris',
 });

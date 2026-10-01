@@ -455,12 +455,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .credits-block li { display: flex; justify-content: space-between; gap: 24px; padding: 15px 0; border-bottom: 1px solid var(--border); }
 .credits-block li span { color: var(--muted-foreground); text-align: right; }
 
+.venue-explorer { padding: 34px 0 86px; }
+.venue-results-bar { margin-top: 28px; }
+.venue-empty-state { margin-top: 18px; }
 .venues-layout {
   display: grid;
   grid-template-columns: minmax(380px, 0.9fr) minmax(420px, 1.1fr);
   gap: 34px;
   align-items: start;
-  padding: 42px 0 86px;
+  padding: 0;
 }
 .venue-map-panel {
   position: sticky;
@@ -481,7 +484,23 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .venue-map-heading strong { font-size: 17px; }
 .venue-map-heading span { color: var(--muted-foreground); font-size: 13px; font-weight: 800; }
 .venue-map, .venue-map-loading { width: 100%; height: min(72vh, 690px); }
+.venue-map-frame { position: relative; }
 .venue-map-loading { display: grid; place-items: center; color: var(--muted-foreground); font-weight: 800; }
+.venue-map-empty {
+  position: absolute;
+  z-index: 500;
+  inset: 50% auto auto 50%;
+  width: min(280px, calc(100% - 40px));
+  margin: 0;
+  padding: 14px;
+  border: 2px solid var(--ink);
+  background: #fffaf0;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
 .venue-map .leaflet-control-zoom a { color: var(--ink); }
 .venue-map .leaflet-popup-content { display: grid; gap: 5px; width: 260px !important; margin: 16px 18px; font-family: var(--font-body); line-height: 1.35; }
 .venue-popup-title { font-size: 14px; }
@@ -612,7 +631,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .event-description { grid-row: 3; }
   .credits-block li { align-items: flex-start; flex-direction: column; gap: 5px; }
   .credits-block li span { text-align: left; }
-  .venues-layout { padding-top: 28px; }
+  .venue-explorer { padding-top: 24px; }
   .venue-map, .venue-map-loading { height: min(52vh, 440px); }
   .venues-list { grid-template-columns: 1fr; }
 }

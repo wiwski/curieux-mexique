@@ -10,6 +10,9 @@ export type VenueEventItem = {
   slug: string;
   title: string;
   dateLabel: string;
+  themeIds: string[];
+  months: string[];
+  searchText: string;
 };
 
 export type VenueMapItem = {

@@ -13,7 +13,7 @@ export function SiteHeader() {
       </Link>
       <nav className="desktop-nav" aria-label="Navigation principale">
         <Link href="/programme/">Programme</Link>
-        <Link href="/lieux/">Lieux</Link>
+        <Link href="/lieux/">Carte</Link>
         <a href="mailto:curieuxmexique@lilo.org">Contact</a>
       </nav>
       <Link className="mobile-menu" href="/programme/" aria-label="Programme">

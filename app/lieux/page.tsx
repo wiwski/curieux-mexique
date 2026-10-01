@@ -5,14 +5,16 @@ import { VenuesExplorer, type VenueExplorerItem } from '@/components/venues-expl
 import {
   eventsById,
   formatSessionDate,
+  formatsById,
+  monthsForSession,
   orderedSessions,
   programme,
   venueAddress,
 } from '@/lib/programme';
 
 export const metadata: Metadata = {
-  title: 'Lieux',
-  description: 'Les lieux qui accueillent Curieux Mexique dans le Cap-Sizun.',
+  title: 'Carte',
+  description: 'La carte des rendez-vous de Curieux Mexique dans le Cap-Sizun.',
 };
 
 export default function VenuesPage() {
@@ -38,12 +40,22 @@ export default function VenuesPage() {
     longitude: venue.geo?.longitude ?? null,
     events: (sessionsByVenue.get(venue.id) ?? []).flatMap((session) => {
       const event = eventsById.get(session.eventId);
+      const formatLabel = event ? (formatsById.get(event.formatId)?.label ?? event.formatId) : '';
       return event
         ? [{
             id: session.id,
             slug: event.slug,
             title: event.title,
             dateLabel: formatSessionDate(session),
+            themeIds: event.themeIds,
+            months: monthsForSession(session),
+            searchText: [
+              event.title,
+              event.summary,
+              formatLabel,
+              venue.name,
+              venue.address.locality,
+            ].join(' ').toLocaleLowerCase('fr'),
           }]
         : [];
     }),
@@ -56,9 +68,9 @@ export default function VenuesPage() {
       <div className="page-shell">
         <SiteHeader />
         <header className="page-intro page-intro-compact">
-          <h1>Les lieux</h1>
+          <h1>La carte</h1>
         </header>
-        <VenuesExplorer venues={items} />
+        <VenuesExplorer venues={items} themes={programme.themes} />
         <SiteFooter />
       </div>
     </main>
