@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
-import { VenuesExplorer, type VenueExplorerItem } from '@/components/venues-explorer';
+import {
+  VenuesExplorer,
+  type VenueExplorerItem,
+  type VenueTypeOption,
+} from '@/components/venues-explorer';
 import {
   eventsById,
   formatSessionDate,
@@ -22,6 +26,39 @@ function communeForLocality(locality: string) {
   if (locality === 'Poulgoazec') return 'Plouhinec';
   return locality;
 }
+
+const venueTypes: VenueTypeOption[] = [
+  {
+    id: 'visual-arts',
+    label: 'Arts visuels & photo',
+    themeIds: ['visual-arts', 'photography'],
+  },
+  {
+    id: 'books-languages',
+    label: 'Livres & langues',
+    themeIds: ['literature', 'languages'],
+  },
+  {
+    id: 'cinema',
+    label: 'Cinéma',
+    themeIds: ['cinema'],
+  },
+  {
+    id: 'music-stage',
+    label: 'Musique & scène',
+    themeIds: ['music', 'dance', 'theatre', 'sound'],
+  },
+  {
+    id: 'food-games',
+    label: 'Cuisine & jeux',
+    themeIds: ['food', 'games-theme'],
+  },
+  {
+    id: 'cultures-society',
+    label: 'Cultures & société',
+    themeIds: ['heritage', 'society', 'women', 'indigenous-cultures', 'migration'],
+  },
+];
 
 export default function VenuesPage() {
   const usedVenueIds = new Set(programme.sessions.map((session) => session.venueId));
@@ -83,7 +120,7 @@ export default function VenuesPage() {
         <header className="page-intro page-intro-compact">
           <h1>La carte</h1>
         </header>
-        <VenuesExplorer venues={items} themes={programme.themes} />
+        <VenuesExplorer venues={items} types={venueTypes} />
         <SiteFooter />
       </div>
     </main>

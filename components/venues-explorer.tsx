@@ -24,7 +24,7 @@ export type VenueExplorerItem = Omit<VenueMapItem, 'latitude' | 'longitude'> & {
   website: string | null;
 };
 
-type ThemeOption = { id: string; label: string };
+export type VenueTypeOption = { id: string; label: string; themeIds: string[] };
 type DateFilter = 'all' | 'today' | 'tomorrow' | 'week' | '10' | '11';
 
 function dateKeyInParis(offsetDays = 0) {
@@ -59,15 +59,15 @@ function currentWeek(today: string) {
 
 export function VenuesExplorer({
   venues,
-  themes,
+  types,
 }: {
   venues: VenueExplorerItem[];
-  themes: ThemeOption[];
+  types: VenueTypeOption[];
 }) {
   const [activeVenueId, setActiveVenueId] = useState<string | null>(null);
   const [query, setQuery] = useState('');
   const [dateFilter, setDateFilter] = useState<DateFilter>('all');
-  const [theme, setTheme] = useState('all');
+  const [type, setType] = useState('all');
   const [commune, setCommune] = useState('all');
 
   const communes = useMemo(
@@ -85,6 +85,9 @@ export function VenuesExplorer({
         : dateFilter === 'week'
           ? currentWeek(today)
           : null;
+    const selectedThemeIds = type === 'all'
+      ? null
+      : types.find((option) => option.id === type)?.themeIds ?? [];
     return venues.flatMap((venue) => {
       if (commune !== 'all' && venue.commune !== commune) return [];
       const events = venue.events.filter((event) => {
@@ -95,12 +98,13 @@ export function VenuesExplorer({
           || (selectedPeriod
             ? event.startsOn <= selectedPeriod.endsOn && event.endsOn >= selectedPeriod.startsOn
             : event.months.includes(dateFilter));
-        const matchesTheme = theme === 'all' || event.themeIds.includes(theme);
-        return matchesQuery && matchesDate && matchesTheme;
+        const matchesType = selectedThemeIds === null
+          || selectedThemeIds.some((themeId) => event.themeIds.includes(themeId));
+        return matchesQuery && matchesDate && matchesType;
       });
       return events.length ? [{ ...venue, events }] : [];
     });
-  }, [commune, dateFilter, query, theme, venues]);
+  }, [commune, dateFilter, query, type, types, venues]);
 
   const mappedVenues: VenueMapItem[] = filteredVenues.flatMap((venue) =>
     venue.latitude === null || venue.longitude === null
@@ -111,7 +115,7 @@ export function VenuesExplorer({
   const hasFilters = Boolean(query)
     || dateFilter !== 'all'
     || commune !== 'all'
-    || theme !== 'all';
+    || type !== 'all';
 
   useEffect(() => {
     if (activeVenueId && !filteredVenues.some((venue) => venue.id === activeVenueId)) {
@@ -123,7 +127,7 @@ export function VenuesExplorer({
     setQuery('');
     setDateFilter('all');
     setCommune('all');
-    setTheme('all');
+    setType('all');
     setActiveVenueId(null);
   }
 
@@ -187,9 +191,9 @@ export function VenuesExplorer({
           </label>
           <label className="theme-filter">
             <span>Type</span>
-            <NativeSelect value={theme} onChange={(event) => setTheme(event.target.value)}>
+            <NativeSelect value={type} onChange={(event) => setType(event.target.value)}>
               <NativeSelectOption value="all">Tous les types</NativeSelectOption>
-              {themes.map((option) => (
+              {types.map((option) => (
                 <NativeSelectOption key={option.id} value={option.id}>{option.label}</NativeSelectOption>
               ))}
             </NativeSelect>
