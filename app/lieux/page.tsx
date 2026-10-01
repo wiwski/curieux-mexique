@@ -2,7 +2,13 @@ import type { Metadata } from 'next';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { VenuesExplorer, type VenueExplorerItem } from '@/components/venues-explorer';
-import { programme, venueAddress } from '@/lib/programme';
+import {
+  eventsById,
+  formatSessionDate,
+  orderedSessions,
+  programme,
+  venueAddress,
+} from '@/lib/programme';
 
 export const metadata: Metadata = {
   title: 'Lieux',
@@ -17,10 +23,12 @@ export default function VenuesPage() {
       const locality = a.address.locality.localeCompare(b.address.locality, 'fr');
       return locality || a.name.localeCompare(b.name, 'fr');
     });
-  const eventCounts = programme.sessions.reduce<Record<string, number>>((counts, session) => {
-    counts[session.venueId] = (counts[session.venueId] ?? 0) + 1;
-    return counts;
-  }, {});
+  const sessionsByVenue = orderedSessions.reduce((groups, session) => {
+    const venueSessions = groups.get(session.venueId) ?? [];
+    venueSessions.push(session);
+    groups.set(session.venueId, venueSessions);
+    return groups;
+  }, new Map<string, typeof orderedSessions>());
   const items: VenueExplorerItem[] = venues.map((venue) => ({
     id: venue.id,
     name: venue.name,
@@ -28,7 +36,17 @@ export default function VenuesPage() {
     locality: venue.address.locality,
     latitude: venue.geo?.latitude ?? null,
     longitude: venue.geo?.longitude ?? null,
-    eventCount: eventCounts[venue.id] ?? 0,
+    events: (sessionsByVenue.get(venue.id) ?? []).flatMap((session) => {
+      const event = eventsById.get(session.eventId);
+      return event
+        ? [{
+            id: session.id,
+            slug: event.slug,
+            title: event.title,
+            dateLabel: formatSessionDate(session),
+          }]
+        : [];
+    }),
     website: venue.website,
   }));
 

@@ -1,8 +1,16 @@
 'use client';
 
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import L from 'leaflet';
+import Link from 'next/link';
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
+
+export type VenueEventItem = {
+  id: string;
+  slug: string;
+  title: string;
+  dateLabel: string;
+};
 
 export type VenueMapItem = {
   id: string;
@@ -11,7 +19,7 @@ export type VenueMapItem = {
   locality: string;
   latitude: number;
   longitude: number;
-  eventCount: number;
+  events: VenueEventItem[];
 };
 
 function markerIcon(active: boolean, count: number) {
@@ -43,6 +51,47 @@ function MapPosition({ venues, activeVenue }: { venues: VenueMapItem[]; activeVe
   return null;
 }
 
+function VenueMarker({
+  venue,
+  active,
+  onSelectVenue,
+}: {
+  venue: VenueMapItem;
+  active: boolean;
+  onSelectVenue: (venueId: string) => void;
+}) {
+  const markerRef = useRef<L.Marker | null>(null);
+
+  useEffect(() => {
+    if (active) markerRef.current?.openPopup();
+  }, [active]);
+
+  return (
+    <Marker
+      ref={markerRef}
+      position={[venue.latitude, venue.longitude]}
+      icon={markerIcon(active, venue.events.length)}
+      title={venue.name}
+      eventHandlers={{ click: () => onSelectVenue(venue.id) }}
+    >
+      <Popup>
+        <strong className="venue-popup-title">{venue.name}</strong>
+        <span className="venue-popup-address">{venue.address}</span>
+        <ul className="venue-popup-events">
+          {venue.events.map((event) => (
+            <li key={event.id}>
+              <Link href={`/evenements/${event.slug}/`}>
+                <span>{event.dateLabel}</span>
+                <strong>{event.title}</strong>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Popup>
+    </Marker>
+  );
+}
+
 export function VenueMapCanvas({
   venues,
   activeVenueId,
@@ -62,19 +111,12 @@ export function VenueMapCanvas({
       />
       <MapPosition venues={venues} activeVenue={activeVenue} />
       {venues.map((venue) => (
-        <Marker
+        <VenueMarker
           key={venue.id}
-          position={[venue.latitude, venue.longitude]}
-          icon={markerIcon(venue.id === activeVenueId, venue.eventCount)}
-          title={venue.name}
-          eventHandlers={{ click: () => onSelectVenue(venue.id) }}
-        >
-          <Popup>
-            <strong>{venue.name}</strong>
-            <span>{venue.address}</span>
-            <small>{venue.eventCount} rendez-vous</small>
-          </Popup>
-        </Marker>
+          venue={venue}
+          active={venue.id === activeVenueId}
+          onSelectVenue={onSelectVenue}
+        />
       ))}
     </MapContainer>
   );

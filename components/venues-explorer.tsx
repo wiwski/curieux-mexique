@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import { useState } from 'react';
 import { MapPin } from 'lucide-react';
 import type { VenueMapItem } from '@/components/venue-map-canvas';
@@ -66,7 +67,17 @@ export function VenuesExplorer({ venues }: { venues: VenueExplorerItem[] }) {
             <p className="venue-locality">{venue.locality}</p>
             <h2>{venue.name}</h2>
             <p className="venue-address"><MapPin aria-hidden="true" /> {venue.address}</p>
-            <p className="venue-events">{venue.eventCount} rendez-vous</p>
+            <p className="venue-events">{venue.events.length} rendez-vous</p>
+            <ul className="venue-event-list">
+              {venue.events.map((event) => (
+                <li key={event.id}>
+                  <Link href={`/evenements/${event.slug}/`}>
+                    <span>{event.dateLabel}</span>
+                    <strong>{event.title}</strong>
+                  </Link>
+                </li>
+              ))}
+            </ul>
             <div className="venue-actions">
               {venue.latitude !== null && venue.longitude !== null ? (
                 <button type="button" onClick={() => selectVenue(venue.id, 'list')}>Localiser</button>
