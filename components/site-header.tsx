@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CalendarDays } from 'lucide-react';
+import { CalendarDays, MapPin } from 'lucide-react';
 
 export function SiteHeader() {
   return (
@@ -16,9 +16,14 @@ export function SiteHeader() {
         <Link href="/lieux/">Carte</Link>
         <a href="mailto:curieuxmexique@lilo.org">Contact</a>
       </nav>
-      <Link className="mobile-menu" href="/programme/" aria-label="Programme">
-        <CalendarDays aria-hidden="true" />
-      </Link>
+      <nav className="mobile-nav" aria-label="Navigation principale">
+        <Link className="mobile-nav-link" href="/programme/" aria-label="Programme">
+          <CalendarDays aria-hidden="true" />
+        </Link>
+        <Link className="mobile-nav-link" href="/lieux/" aria-label="Carte">
+          <MapPin aria-hidden="true" />
+        </Link>
+      </nav>
     </header>
   );
 }

@@ -116,15 +116,22 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transition: right 180ms ease;
 }
 .desktop-nav a:hover::after, .desktop-nav a:focus-visible::after { right: 0; }
-.mobile-menu {
+.mobile-nav {
   display: none;
+  align-items: center;
+  gap: 8px;
+}
+.mobile-nav-link {
   width: 44px;
   height: 44px;
+  display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
   border: 2px solid var(--ink);
   background: var(--yellow);
 }
+.mobile-nav-link svg { width: 21px; height: 21px; }
 
 .hero {
   min-height: 690px;
@@ -596,7 +603,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .site-header { min-height: 72px; }
   .brand-wordmark { font-size: 27px; }
   .desktop-nav { display: none; }
-  .mobile-menu { display: inline-flex; }
+  .mobile-nav { display: flex; }
   .hero { grid-template-columns: 1fr; min-height: auto; gap: 52px; padding: 42px 0 74px; }
   .hero h1 { font-size: clamp(68px, 25vw, 108px); }
   .hero-lead { margin-top: 32px; font-size: 19px; }
