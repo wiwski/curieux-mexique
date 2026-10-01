@@ -6,8 +6,8 @@ import { Input } from '@/components/ui/input';
 import { NativeSelect, NativeSelectOption } from '@/components/ui/native-select';
 import {
   dateFilterOptions,
-  eventTypeOptions,
   type DateFilter,
+  type EventTypeOption,
 } from '@/lib/event-filters';
 
 export function EventFilters({
@@ -20,6 +20,7 @@ export function EventFilters({
   communes,
   type,
   onTypeChange,
+  types,
 }: {
   query: string;
   onQueryChange: (value: string) => void;
@@ -30,6 +31,7 @@ export function EventFilters({
   communes: string[];
   type: string;
   onTypeChange: (value: string) => void;
+  types: EventTypeOption[];
 }) {
   return (
     <div className="filters event-filters" aria-label="Rechercher et filtrer les événements">
@@ -71,7 +73,7 @@ export function EventFilters({
           <span>Type</span>
           <NativeSelect value={type} onChange={(event) => onTypeChange(event.target.value)}>
             <NativeSelectOption value="all">Tous les types</NativeSelectOption>
-            {eventTypeOptions.map((option) => (
+            {types.map((option) => (
               <NativeSelectOption key={option.id} value={option.id}>{option.label}</NativeSelectOption>
             ))}
           </NativeSelect>

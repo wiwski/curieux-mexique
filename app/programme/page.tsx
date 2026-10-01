@@ -9,6 +9,7 @@ import {
   formatsById,
   monthsForSession,
   orderedSessions,
+  programme,
   sessionDayParts,
   venuesById,
 } from '@/lib/programme';
@@ -32,7 +33,7 @@ export default function ProgrammePage() {
       summary: event.summary,
       formatId: event.formatId,
       formatLabel,
-      themeIds: event.themeIds,
+      typeId: event.typeId,
       venueName: venue.name,
       venueLocality: venue.address.locality,
       commune: communeForLocality(venue.address.locality),
@@ -60,7 +61,7 @@ export default function ProgrammePage() {
         <header className="page-intro page-intro-compact">
           <h1>Le programme</h1>
         </header>
-        <ProgrammeBrowser items={items} />
+        <ProgrammeBrowser items={items} types={programme.eventTypes} />
         <SiteFooter />
       </div>
     </main>

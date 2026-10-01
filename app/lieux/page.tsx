@@ -55,7 +55,7 @@ export default function VenuesPage() {
             endsOn: session.timing.kind === 'scheduled'
               ? session.timing.startsAt.slice(0, 10)
               : session.timing.endsOn,
-            themeIds: event.themeIds,
+            typeId: event.typeId,
             months: monthsForSession(session),
             searchText: [
               event.title,
@@ -78,7 +78,7 @@ export default function VenuesPage() {
         <header className="page-intro page-intro-compact">
           <h1>La carte</h1>
         </header>
-        <VenuesExplorer venues={items} />
+        <VenuesExplorer venues={items} types={programme.eventTypes} />
         <SiteFooter />
       </div>
     </main>

@@ -12,6 +12,7 @@ import {
   matchesDateFilter,
   matchesTypeFilter,
   type DateFilter,
+  type EventTypeOption,
 } from '@/lib/event-filters';
 
 const VenueMapCanvas = dynamic(
@@ -29,7 +30,13 @@ export type VenueExplorerItem = Omit<VenueMapItem, 'latitude' | 'longitude'> & {
   website: string | null;
 };
 
-export function VenuesExplorer({ venues }: { venues: VenueExplorerItem[] }) {
+export function VenuesExplorer({
+  venues,
+  types,
+}: {
+  venues: VenueExplorerItem[];
+  types: EventTypeOption[];
+}) {
   const [activeVenueId, setActiveVenueId] = useState<string | null>(null);
   const [query, setQuery] = useState('');
   const [dateFilter, setDateFilter] = useState<DateFilter>('all');
@@ -51,7 +58,7 @@ export function VenuesExplorer({ venues }: { venues: VenueExplorerItem[] }) {
           || event.searchText.includes(normalizedQuery)
           || venue.commune.toLocaleLowerCase('fr').includes(normalizedQuery);
         const matchesDate = matchesDateFilter(event, dateFilter, selectedPeriod);
-        const matchesType = matchesTypeFilter(event.themeIds, type);
+        const matchesType = matchesTypeFilter(event.typeId, type);
         return matchesQuery && matchesDate && matchesType;
       });
       return events.length ? [{ ...venue, events }] : [];
@@ -109,6 +116,7 @@ export function VenuesExplorer({ venues }: { venues: VenueExplorerItem[] }) {
         communes={communes}
         type={type}
         onTypeChange={setType}
+        types={types}
       />
 
       <div className="results-bar venue-results-bar">

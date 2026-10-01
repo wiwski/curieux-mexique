@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.1.0",
+  "schemaVersion": "1.2.0",
   "edition": {
     "id": "curieux-mexique-2026",
     "name": "Curieux Mexique",
@@ -157,6 +157,32 @@
     {
       "id": "children-activity",
       "label": "Animation pour enfants"
+    }
+  ],
+  "eventTypes": [
+    {
+      "id": "arts-exhibitions",
+      "label": "Arts & expositions"
+    },
+    {
+      "id": "books-languages",
+      "label": "Livres & langues"
+    },
+    {
+      "id": "cinema",
+      "label": "Cinéma"
+    },
+    {
+      "id": "music-stage",
+      "label": "Musique & scène"
+    },
+    {
+      "id": "food-games",
+      "label": "Cuisine & jeux"
+    },
+    {
+      "id": "cultures-society",
+      "label": "Cultures & société"
     }
   ],
   "themes": [
@@ -1459,6 +1485,7 @@
     {
       "id": "inauguration-curieux-mexique",
       "slug": "inauguration-curieux-mexique",
+      "typeId": "arts-exhibitions",
       "title": "Inauguration de Curieux Mexique",
       "shortTitle": "Inauguration",
       "summary": "Vernissage des expositions Fotografas de la vida cotidiana et De phare en lumière.",
@@ -1480,6 +1507,7 @@
     {
       "id": "presentation-kok-tan",
       "slug": "presentation-kok-tan",
+      "typeId": "books-languages",
       "title": "Présentation du livre K'o'k tan",
       "shortTitle": "K'o'k tan",
       "summary": "Présentation d'un album jeunesse en tsotsil-maya et en breton, inspiré de souvenirs d'enfance au Chiapas.",
@@ -1502,6 +1530,7 @@
     {
       "id": "repas-partage-espagnol",
       "slug": "repas-partage-espagnol",
+      "typeId": "food-games",
       "title": "Repas partagé en espagnol",
       "shortTitle": null,
       "summary": "Repas partagé du midi pour pratiquer l'espagnol.",
@@ -1520,6 +1549,7 @@
     {
       "id": "atelier-calaveritas",
       "slug": "atelier-calaveritas",
+      "typeId": "arts-exhibitions",
       "title": "Atelier calaveritas",
       "shortTitle": null,
       "summary": "Atelier créatif autour des calaveritas mexicaines.",
@@ -1538,6 +1568,7 @@
     {
       "id": "lecture-litterature-mexicaine",
       "slug": "lecture-litterature-mexicaine",
+      "typeId": "books-languages",
       "title": "Littérature mexicaine - Lecture à voix haute",
       "shortTitle": "Lecture à voix haute",
       "summary": "Lecture de textes d'autrices et auteurs mexicains par l'association Les Arts Singuliers.",
@@ -1556,6 +1587,7 @@
     {
       "id": "projection-cosmos",
       "slug": "projection-cosmos",
+      "typeId": "cinema",
       "title": "Projection du film Cosmos",
       "shortTitle": "Cosmos",
       "summary": "Dans un village du Yucatán, la rencontre entre Leon, gardien maya des secrets de la nature, et Lena, femme de lettres venue de Mexico.",
@@ -1574,6 +1606,7 @@
     {
       "id": "frida-par-frida",
       "slug": "frida-par-frida",
+      "typeId": "music-stage",
       "title": "Lecture théâtralisée Frida par Frida",
       "shortTitle": "Frida par Frida",
       "summary": "Lecture théâtralisée proposée par l'association Azimuts.",
@@ -1592,6 +1625,7 @@
     {
       "id": "atelier-fleurs-ofrenda",
       "slug": "atelier-fleurs-ofrenda",
+      "typeId": "arts-exhibitions",
       "title": "Atelier créatif Fleurs ofrenda",
       "shortTitle": "Fleurs ofrenda",
       "summary": "Atelier créatif consacré aux fleurs d'ofrenda.",
@@ -1610,6 +1644,7 @@
     {
       "id": "atelier-petite-boite-mexicaine",
       "slug": "atelier-petite-boite-mexicaine",
+      "typeId": "arts-exhibitions",
       "title": "Atelier petite boîte mexicaine",
       "shortTitle": "Petite boîte mexicaine",
       "summary": "Atelier animé par les bénévoles des bibliothèques d'Esquibien et de Primelin.",
@@ -1631,6 +1666,7 @@
     {
       "id": "cafe-apero-espagnol",
       "slug": "cafe-apero-espagnol",
+      "typeId": "books-languages",
       "title": "Café-apéro en espagnol",
       "shortTitle": null,
       "summary": "Temps convivial de pratique de l'espagnol.",
@@ -1649,6 +1685,7 @@
     {
       "id": "rencontre-mais-alexis",
       "slug": "rencontre-mais-alexis",
+      "typeId": "cultures-society",
       "title": "Rencontre autour du maïs et projection du court métrage Alexis",
       "shortTitle": "Rencontre maïs et court métrage Alexis",
       "summary": "Rencontre autour du maïs bleu cultivé en Auvergne à partir de variétés originaires des terres Nahuas du Mexique.",
@@ -1670,6 +1707,7 @@
     {
       "id": "projection-mejk",
       "slug": "projection-mejk",
+      "typeId": "cinema",
       "title": "Projection du documentaire Mëjk",
       "shortTitle": "Mëjk",
       "summary": "Le quotidien de Genaro, instituteur dans un village autochtone du Mexique, pour qui enseigner signifie avant tout partager.",
@@ -1688,6 +1726,7 @@
     {
       "id": "projection-hola-frida",
       "slug": "projection-hola-frida",
+      "typeId": "cinema",
       "title": "Projection du film d'animation Hola Frida",
       "shortTitle": "Hola Frida",
       "summary": "Film d'animation sur l'enfance de Frida Kahlo, suivi d'un atelier d'autoportrait.",
@@ -1709,6 +1748,7 @@
     {
       "id": "atelier-creatif-collation-primelin",
       "slug": "atelier-creatif-collation-primelin",
+      "typeId": "arts-exhibitions",
       "title": "Atelier créatif et collation",
       "shortTitle": null,
       "summary": "Atelier créatif suivi d'une petite collation à la bibliothèque de Primelin.",
@@ -1727,6 +1767,7 @@
     {
       "id": "atelier-conte-feu",
       "slug": "atelier-conte-feu",
+      "typeId": "books-languages",
       "title": "Atelier conte Feu",
       "shortTitle": "Feu",
       "summary": "Atelier pour se raconter, inventer des récits sur le feu, peindre et écrire à partir d'un album situé dans les montagnes du Chiapas.",
@@ -1748,6 +1789,7 @@
     {
       "id": "atelier-creatif-ti-al-leor",
       "slug": "atelier-creatif-ti-al-leor",
+      "typeId": "arts-exhibitions",
       "title": "Atelier créatif à Ti Al Leor",
       "shortTitle": "Atelier créatif",
       "summary": "Atelier créatif à la bibliothèque Ti Al Leor de Cléden-Cap-Sizun.",
@@ -1766,6 +1808,7 @@
     {
       "id": "atelier-contes-pinata",
       "slug": "atelier-contes-pinata",
+      "typeId": "arts-exhibitions",
       "title": "Atelier contes et piñata",
       "shortTitle": null,
       "summary": "Atelier de contes et fabrication ou découverte d'une piñata.",
@@ -1784,6 +1827,7 @@
     {
       "id": "atelier-cuisine-mexicaine",
       "slug": "atelier-cuisine-mexicaine",
+      "typeId": "food-games",
       "title": "Atelier de cuisine mexicaine et repas",
       "shortTitle": "Cuisine mexicaine et repas",
       "summary": "Atelier de cuisine mexicaine suivi d'un repas collectif.",
@@ -1802,6 +1846,7 @@
     {
       "id": "projection-coco",
       "slug": "projection-coco",
+      "typeId": "cinema",
       "title": "Projection du film d'animation Coco",
       "shortTitle": "Coco",
       "summary": "Séance déguisée du film d'animation Coco.",
@@ -1823,6 +1868,7 @@
     {
       "id": "matinee-jeux-juegos",
       "slug": "matinee-jeux-juegos",
+      "typeId": "food-games",
       "title": "Matinée jeux - Juegos",
       "shortTitle": "Juegos",
       "summary": "Matinée de jeux à la ludothèque Ti C'hoari.",
@@ -1841,6 +1887,7 @@
     {
       "id": "marionnettes-an-ti-kamm",
       "slug": "marionnettes-an-ti-kamm",
+      "typeId": "music-stage",
       "title": "Marionnettes An Ti Kamm",
       "shortTitle": "An Ti Kamm",
       "summary": "L'histoire d'Alfonso, onze ans, qui doit trouver sa maison avant la fête annuelle des maisons.",
@@ -1859,6 +1906,7 @@
     {
       "id": "atelier-pan-de-muertos",
       "slug": "atelier-pan-de-muertos",
+      "typeId": "food-games",
       "title": "Atelier Pan de muertos",
       "shortTitle": null,
       "summary": "Atelier de fabrication du pain traditionnel du Día de Muertos avec Mathilde Gaillard.",
@@ -1877,6 +1925,7 @@
     {
       "id": "animation-ados",
       "slug": "animation-ados",
+      "typeId": "arts-exhibitions",
       "title": "Animation ados",
       "shortTitle": null,
       "summary": "Animation destinée aux adolescents à La Obra.",
@@ -1895,6 +1944,7 @@
     {
       "id": "dia-de-muertos",
       "slug": "dia-de-muertos",
+      "typeId": "cultures-society",
       "title": "Día de Muertos",
       "shortTitle": null,
       "summary": "Journée de fête avec ofrenda, ateliers créatifs, maquillage, tortillas, restauration et concert.",
@@ -1913,6 +1963,7 @@
     {
       "id": "concert-milelio",
       "slug": "concert-milelio",
+      "typeId": "music-stage",
       "title": "Milelio - La Ceiba, boleros y más",
       "shortTitle": "Milelio",
       "summary": "Concert ancré dans les musiques traditionnelles latino-américaines, entre voix et guitare.",
@@ -1934,6 +1985,7 @@
     {
       "id": "initiation-zapateado",
       "slug": "initiation-zapateado",
+      "typeId": "music-stage",
       "title": "Initiation au zapateado avec Yesenia García",
       "shortTitle": "Initiation zapateado",
       "summary": "Initiation à la danse percussive mexicaine zapateado.",
@@ -1952,6 +2004,7 @@
     {
       "id": "concert-la-selva-canta",
       "slug": "concert-la-selva-canta",
+      "typeId": "music-stage",
       "title": "La Selva Canta",
       "shortTitle": null,
       "summary": "Duo mêlant rythmes mexicains, jarana, zapateado et accordéon diatonique.",
@@ -1973,6 +2026,7 @@
     {
       "id": "courts-metrages-documentaires",
       "slug": "courts-metrages-documentaires",
+      "typeId": "cinema",
       "title": "Courts métrages documentaires de San Cristóbal de las Casas",
       "shortTitle": "Courts métrages documentaires",
       "summary": "Projection de Le ciel est très joli, Nyanga et Ventre de lune dans le cadre du Mois du documentaire.",
@@ -1999,6 +2053,7 @@
     {
       "id": "conte-musical-la-llorona",
       "slug": "conte-musical-la-llorona",
+      "typeId": "music-stage",
       "title": "Conte musical La Llorona",
       "shortTitle": "La Llorona",
       "summary": "Conte et chants autour de la Llorona, légende emblématique du Mexique.",
@@ -2021,6 +2076,7 @@
     {
       "id": "cafe-linguistique",
       "slug": "cafe-linguistique",
+      "typeId": "books-languages",
       "title": "Café linguistique en espagnol",
       "shortTitle": null,
       "summary": "Discussions en espagnol et dans d'autres langues, sans niveau requis.",
@@ -2039,6 +2095,7 @@
     {
       "id": "rencontre-autrices-mexicaines",
       "slug": "rencontre-autrices-mexicaines",
+      "typeId": "books-languages",
       "title": "À la découverte des autrices mexicaines avec Lise Belperron",
       "shortTitle": "Autrices mexicaines contemporaines",
       "summary": "Rencontre sur les autrices contemporaines du Mexique et le travail de traduction de Lise Belperron.",
@@ -2060,6 +2117,7 @@
     {
       "id": "atelier-traduction",
       "slug": "atelier-traduction",
+      "typeId": "books-languages",
       "title": "Atelier de traduction avec Lise Belperron",
       "shortTitle": "Atelier de traduction",
       "summary": "Découverte des joies et difficultés de la traduction à partir de trois extraits de Dahlia de la Cerda.",
@@ -2078,6 +2136,7 @@
     {
       "id": "jam-cedre-bleu",
       "slug": "jam-cedre-bleu",
+      "typeId": "music-stage",
       "title": "Jam du Cèdre Bleu",
       "shortTitle": null,
       "summary": "Session de musique improvisée.",
@@ -2096,6 +2155,7 @@
     {
       "id": "animation-enfants-mahalon",
       "slug": "animation-enfants-mahalon",
+      "typeId": "food-games",
       "title": "Animation pour enfants",
       "shortTitle": null,
       "summary": "Animation pour enfants à la bibliothèque de Mahalon.",
@@ -2114,6 +2174,7 @@
     {
       "id": "concert-ndahi",
       "slug": "concert-ndahi",
+      "typeId": "music-stage",
       "title": "Ndahi - Concert commenté",
       "shortTitle": "Ndahi",
       "summary": "Voyage commenté à travers les courants musicaux, les peuples et les régions du Mexique.",
@@ -2132,6 +2193,7 @@
     {
       "id": "rencontre-femmes-mexique",
       "slug": "rencontre-femmes-mexique",
+      "typeId": "cultures-society",
       "title": "Rencontre Femmes au Mexique",
       "shortTitle": null,
       "summary": "Rencontre croisée sur les migrations, les enseignantes mobilisées et la place des femmes chez les Tsotsils.",
@@ -2154,6 +2216,7 @@
     {
       "id": "projection-vanilla",
       "slug": "projection-vanilla",
+      "typeId": "cinema",
       "title": "Projection du film Vanilla",
       "shortTitle": "Vanilla",
       "summary": "Sept femmes se battent pour sauver leur maison, dans un foyer sans père observé à hauteur d'une enfant de huit ans.",
@@ -2172,6 +2235,7 @@
     {
       "id": "presentation-livre-charco",
       "slug": "presentation-livre-charco",
+      "typeId": "books-languages",
       "title": "Présentation du livre De l'autre côté du charco",
       "shortTitle": "De l'autre côté du charco",
       "summary": "Récit d'un voyage fait d'allers-retours entre Mexico, le Guerrero, Oaxaca, l'isthme de Tehuantepec et le Chiapas.",
@@ -2193,6 +2257,7 @@
     {
       "id": "visite-danza-diablos",
       "slug": "visite-danza-diablos",
+      "typeId": "arts-exhibitions",
       "title": "Visite guidée de l'exposition La danza de los diablos",
       "shortTitle": "Visite de La danza de los diablos",
       "summary": "Visite guidée avec Patxi Beltzaiz et Véro Traba.",
@@ -2214,6 +2279,7 @@
     {
       "id": "cloture-chillipili",
       "slug": "cloture-chillipili",
+      "typeId": "music-stage",
       "title": "Soirée de clôture avec Chillipili Sound System",
       "shortTitle": "Chillipili Sound System",
       "summary": "DJ-sonidero mêlant musiques traditionnelles, électronique et rythmes éclectiques pour danser.",
@@ -2232,6 +2298,7 @@
     {
       "id": "fotografas-vida-cotidiana",
       "slug": "fotografas-vida-cotidiana",
+      "typeId": "arts-exhibitions",
       "title": "Fotógrafas de la vida cotidiana",
       "shortTitle": "Mexican Women Photographers",
       "summary": "Parcours photographique présentant dans plusieurs lieux une sélection de photographies réalisées par des femmes mexicaines.",
@@ -2253,6 +2320,7 @@
     {
       "id": "de-phare-en-lumiere",
       "slug": "de-phare-en-lumiere",
+      "typeId": "arts-exhibitions",
       "title": "De phare en lumière - Le regard de Ramiro Chaves",
       "shortTitle": "De phare en lumière",
       "summary": "Exposition photographique sur les liens entre paysage, lumière et territoire.",
@@ -2274,6 +2342,7 @@
     {
       "id": "exposition-sonore-vie-ville-sons",
       "slug": "exposition-sonore-vie-ville-sons",
+      "typeId": "arts-exhibitions",
       "title": "La vie, la ville et ses sons",
       "shortTitle": "Exposition sonore",
       "summary": "Voyage sonore itinérant dans les médiathèques, bibliothèques et écoles du Cap-Sizun.",
@@ -2292,6 +2361,7 @@
     {
       "id": "exposition-art-wixarika",
       "slug": "exposition-art-wixarika",
+      "typeId": "arts-exhibitions",
       "title": "Exposition d'art Wixárika-Huichol",
       "shortTitle": "Art Wixárika-Huichol",
       "summary": "Tableaux de fils de laine et broderies liés à la tradition spirituelle des Wixáritari.",
@@ -2310,6 +2380,7 @@
     {
       "id": "exposition-danza-diablos",
       "slug": "exposition-danza-diablos",
+      "typeId": "arts-exhibitions",
       "title": "La danza de los diablos",
       "shortTitle": null,
       "summary": "Série photographique sur une tradition de la Costa Chica du Guerrero qui affirme l'héritage afro-mexicain.",

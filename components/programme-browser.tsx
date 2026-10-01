@@ -10,6 +10,7 @@ import {
   matchesDateFilter,
   matchesTypeFilter,
   type DateFilter,
+  type EventTypeOption,
 } from '@/lib/event-filters';
 
 export type ProgrammeItem = {
@@ -19,7 +20,7 @@ export type ProgrammeItem = {
   summary: string;
   formatId: string;
   formatLabel: string;
-  themeIds: string[];
+  typeId: string;
   venueName: string;
   venueLocality: string;
   commune: string;
@@ -32,7 +33,13 @@ export type ProgrammeItem = {
   searchText: string;
 };
 
-export function ProgrammeBrowser({ items }: { items: ProgrammeItem[] }) {
+export function ProgrammeBrowser({
+  items,
+  types,
+}: {
+  items: ProgrammeItem[];
+  types: EventTypeOption[];
+}) {
   const [query, setQuery] = useState('');
   const [dateFilter, setDateFilter] = useState<DateFilter>('all');
   const [commune, setCommune] = useState('all');
@@ -52,7 +59,7 @@ export function ProgrammeBrowser({ items }: { items: ProgrammeItem[] }) {
         || item.commune.toLocaleLowerCase('fr').includes(normalizedQuery);
       const matchesCommune = commune === 'all' || item.commune === commune;
       const matchesDate = matchesDateFilter(item, dateFilter, selectedPeriod);
-      const matchesType = matchesTypeFilter(item.themeIds, type);
+      const matchesType = matchesTypeFilter(item.typeId, type);
       return matchesQuery && matchesCommune && matchesDate && matchesType;
     });
   }, [commune, dateFilter, items, query, type]);
@@ -81,6 +88,7 @@ export function ProgrammeBrowser({ items }: { items: ProgrammeItem[] }) {
         communes={communes}
         type={type}
         onTypeChange={setType}
+        types={types}
       />
 
       <div className="results-bar">

@@ -12,7 +12,7 @@ export type VenueEventItem = {
   dateLabel: string;
   startsOn: string;
   endsOn: string;
-  themeIds: string[];
+  typeId: string;
   months: string[];
   searchText: string;
 };

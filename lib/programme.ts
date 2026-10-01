@@ -36,6 +36,7 @@ export type Event = {
   summary: string;
   description: string | null;
   formatId: string;
+  typeId: string;
   themeIds: string[];
   audienceIds: string[];
   ageRange: string | null;
@@ -78,6 +79,7 @@ type ProgrammeData = {
   };
   audiences: TaxonomyTerm[];
   formats: TaxonomyTerm[];
+  eventTypes: TaxonomyTerm[];
   themes: TaxonomyTerm[];
   venues: Venue[];
   contributors: Contributor[];

@@ -3,7 +3,6 @@ export type DateFilter = 'all' | 'today' | 'tomorrow' | 'week' | '10' | '11';
 export type EventTypeOption = {
   id: string;
   label: string;
-  themeIds: string[];
 };
 
 export const dateFilterOptions: { id: DateFilter; label: string }[] = [
@@ -13,39 +12,6 @@ export const dateFilterOptions: { id: DateFilter; label: string }[] = [
   { id: 'week', label: 'Cette semaine' },
   { id: '10', label: 'Octobre' },
   { id: '11', label: 'Novembre' },
-];
-
-export const eventTypeOptions: EventTypeOption[] = [
-  {
-    id: 'visual-arts',
-    label: 'Arts visuels & photo',
-    themeIds: ['visual-arts', 'photography'],
-  },
-  {
-    id: 'books-languages',
-    label: 'Livres & langues',
-    themeIds: ['literature', 'languages'],
-  },
-  {
-    id: 'cinema',
-    label: 'Cinéma',
-    themeIds: ['cinema'],
-  },
-  {
-    id: 'music-stage',
-    label: 'Musique & scène',
-    themeIds: ['music', 'dance', 'theatre', 'sound'],
-  },
-  {
-    id: 'food-games',
-    label: 'Cuisine & jeux',
-    themeIds: ['food', 'games-theme'],
-  },
-  {
-    id: 'cultures-society',
-    label: 'Cultures & société',
-    themeIds: ['heritage', 'society', 'women', 'indigenous-cultures', 'migration'],
-  },
 ];
 
 export function communeForLocality(locality: string) {
@@ -95,8 +61,6 @@ export function matchesDateFilter(
   return item.months.includes(filter);
 }
 
-export function matchesTypeFilter(themeIds: string[], typeId: string) {
-  if (typeId === 'all') return true;
-  const option = eventTypeOptions.find((type) => type.id === typeId);
-  return option ? option.themeIds.some((themeId) => themeIds.includes(themeId)) : false;
+export function matchesTypeFilter(eventTypeId: string, selectedTypeId: string) {
+  return selectedTypeId === 'all' || eventTypeId === selectedTypeId;
 }

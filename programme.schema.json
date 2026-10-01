@@ -10,6 +10,7 @@
     "edition",
     "audiences",
     "formats",
+    "eventTypes",
     "themes",
     "venues",
     "contributors",
@@ -31,6 +32,12 @@
       }
     },
     "formats": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/taxonomyTerm"
+      }
+    },
+    "eventTypes": {
       "type": "array",
       "items": {
         "$ref": "#/$defs/taxonomyTerm"
@@ -429,6 +436,7 @@
         "summary",
         "description",
         "formatId",
+        "typeId",
         "themeIds",
         "audienceIds",
         "ageRange",
@@ -459,6 +467,9 @@
           "type": ["string", "null"]
         },
         "formatId": {
+          "$ref": "#/$defs/id"
+        },
+        "typeId": {
           "$ref": "#/$defs/id"
         },
         "themeIds": {
