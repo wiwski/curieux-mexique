@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { eventsById, orderedSessions } from '@/lib/programme';
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
   const nextSessions = orderedSessions
     .filter((session) => session.timing.kind === 'scheduled')
     .slice(0, 3);
@@ -38,7 +39,7 @@ export default function Home() {
           <figure className="poster-wrap">
             <div className="poster-shadow" aria-hidden="true" />
             <Image
-              src="/curieux-mexique-cover.webp"
+              src={`${basePath}/curieux-mexique-cover.webp`}
               alt="Affiche Curieux Mexique 2026, portrait en noir et blanc devant des cactus"
               width={1200}
               height={1697}

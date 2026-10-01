@@ -19,6 +19,10 @@
 # misc
 .DS_Store
 *.pem
+*.swp
+*.tsbuildinfo
+.idea/
+.vscode/
 
 # debug
 npm-debug.log*
@@ -36,3 +40,4 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+/.sites-runtime/
