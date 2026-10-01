@@ -19,7 +19,7 @@ export default function Home() {
 
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <h1 id="hero-title">Curieux<span>Mexique</span></h1>
+            <h1 id="hero-title" className="curieux-mexique-wordmark">Curieux<span>Mexique</span></h1>
             <p className="hero-lead">
               Deux mois pour découvrir le Mexique par la photographie, la
               musique, la littérature, le cinéma et les arts vivants, d’octobre

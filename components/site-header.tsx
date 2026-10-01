@@ -4,11 +4,12 @@ import { CalendarDays } from 'lucide-react';
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <Link href="/" className="brand" aria-label="Curieux Mexique, accueil">
-        <span className="brand-mark" aria-hidden="true">CM</span>
-        <span>
-          <strong>Curieux Mexique</strong>
-        </span>
+      <Link
+        href="/"
+        className="brand curieux-mexique-wordmark brand-wordmark"
+        aria-label="Curieux Mexique, accueil"
+      >
+        Curieux<span>Mexique</span>
       </Link>
       <nav className="desktop-nav" aria-label="Navigation principale">
         <Link href="/programme/">Programme</Link>

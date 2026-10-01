@@ -92,20 +92,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
   gap: 28px;
   border-bottom: 2px solid var(--ink);
 }
-.brand { display: inline-flex; align-items: center; gap: 12px; }
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border: 2px solid var(--ink);
-  background: var(--yellow);
-  box-shadow: 3px 3px 0 var(--ink);
+.curieux-mexique-wordmark {
   font-family: var(--font-display);
-  font-size: 21px;
-  transform: rotate(-3deg);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 0.74;
+  text-transform: uppercase;
+  transform: rotate(-1.2deg);
 }
-.brand strong { display: block; font-size: 16px; }
+.curieux-mexique-wordmark span { display: block; color: var(--red); text-shadow: var(--wordmark-shadow, 4px 4px 0 var(--ink)); }
+.brand { display: inline-block; }
+.brand-wordmark { --wordmark-shadow: 2px 2px 0 var(--ink); font-size: 30px; }
 .desktop-nav { display: flex; align-items: center; gap: 34px; font-size: 14px; font-weight: 800; }
 .desktop-nav a { position: relative; }
 .desktop-nav a::after {
@@ -152,15 +149,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .eyebrow svg { width: 16px; height: 16px; }
 .hero h1 {
   margin: 0;
-  font-family: var(--font-display);
   font-size: clamp(80px, 10.5vw, 155px);
-  font-weight: 900;
-  letter-spacing: -0.045em;
-  line-height: 0.74;
-  text-transform: uppercase;
-  transform: rotate(-1.2deg);
 }
-.hero h1 span { display: block; color: var(--red); text-shadow: 4px 4px 0 var(--ink); }
 .hero-lead {
   max-width: 640px;
   margin: 38px 0 0;
@@ -584,6 +574,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .top-pattern { height: 22px; }
   .page-shell { width: min(100% - 28px, 1240px); }
   .site-header { min-height: 72px; }
+  .brand-wordmark { font-size: 27px; }
   .desktop-nav { display: none; }
   .mobile-menu { display: inline-flex; }
   .hero { grid-template-columns: 1fr; min-height: auto; gap: 52px; padding: 42px 0 74px; }
