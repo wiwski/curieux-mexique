@@ -24,6 +24,24 @@ export type VenueExplorerItem = Omit<VenueMapItem, 'latitude' | 'longitude'> & {
 };
 
 type ThemeOption = { id: string; label: string };
+type DateFilter = 'all' | 'today' | 'tomorrow' | '10' | '11';
+
+function dateKeyInParis(offsetDays = 0) {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/Paris',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(new Date());
+  const value = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  const target = new Date(Date.UTC(
+    Number(value.year),
+    Number(value.month) - 1,
+    Number(value.day) + offsetDays,
+    12,
+  ));
+  return target.toISOString().slice(0, 10);
+}
 
 export function VenuesExplorer({
   venues,
@@ -34,21 +52,29 @@ export function VenuesExplorer({
 }) {
   const [activeVenueId, setActiveVenueId] = useState<string | null>(null);
   const [query, setQuery] = useState('');
-  const [month, setMonth] = useState('all');
+  const [dateFilter, setDateFilter] = useState<DateFilter>('all');
   const [theme, setTheme] = useState('all');
 
   const filteredVenues = useMemo(() => {
     const normalizedQuery = query.trim().toLocaleLowerCase('fr');
+    const selectedDay = dateFilter === 'today'
+      ? dateKeyInParis()
+      : dateFilter === 'tomorrow'
+        ? dateKeyInParis(1)
+        : null;
     return venues.flatMap((venue) => {
       const events = venue.events.filter((event) => {
         const matchesQuery = !normalizedQuery || event.searchText.includes(normalizedQuery);
-        const matchesMonth = month === 'all' || event.months.includes(month);
+        const matchesDate = dateFilter === 'all'
+          || (selectedDay
+            ? event.startsOn <= selectedDay && event.endsOn >= selectedDay
+            : event.months.includes(dateFilter));
         const matchesTheme = theme === 'all' || event.themeIds.includes(theme);
-        return matchesQuery && matchesMonth && matchesTheme;
+        return matchesQuery && matchesDate && matchesTheme;
       });
       return events.length ? [{ ...venue, events }] : [];
     });
-  }, [month, query, theme, venues]);
+  }, [dateFilter, query, theme, venues]);
 
   const mappedVenues: VenueMapItem[] = filteredVenues.flatMap((venue) =>
     venue.latitude === null || venue.longitude === null
@@ -56,7 +82,7 @@ export function VenuesExplorer({
       : [{ ...venue, latitude: venue.latitude, longitude: venue.longitude }],
   );
   const eventCount = filteredVenues.reduce((count, venue) => count + venue.events.length, 0);
-  const hasFilters = Boolean(query) || month !== 'all' || theme !== 'all';
+  const hasFilters = Boolean(query) || dateFilter !== 'all' || theme !== 'all';
 
   useEffect(() => {
     if (activeVenueId && !filteredVenues.some((venue) => venue.id === activeVenueId)) {
@@ -66,7 +92,7 @@ export function VenuesExplorer({
 
   function resetFilters() {
     setQuery('');
-    setMonth('all');
+    setDateFilter('all');
     setTheme('all');
     setActiveVenueId(null);
   }
@@ -98,18 +124,20 @@ export function VenuesExplorer({
             className="filter-input"
           />
         </label>
-        <div className="month-filters" aria-label="Filtrer par mois">
+        <div className="month-filters" aria-label="Filtrer par date">
           {[
             ['all', 'Tout'],
+            ['today', 'Aujourd’hui'],
+            ['tomorrow', 'Demain'],
             ['10', 'Octobre'],
             ['11', 'Novembre'],
           ].map(([value, label]) => (
             <Button
               key={value}
               type="button"
-              variant={month === value ? 'default' : 'outline'}
-              aria-pressed={month === value}
-              onClick={() => setMonth(value)}
+              variant={dateFilter === value ? 'default' : 'outline'}
+              aria-pressed={dateFilter === value}
+              onClick={() => setDateFilter(value as DateFilter)}
               className="filter-button"
             >
               {label}

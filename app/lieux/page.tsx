@@ -47,6 +47,12 @@ export default function VenuesPage() {
             slug: event.slug,
             title: event.title,
             dateLabel: formatSessionDate(session),
+            startsOn: session.timing.kind === 'scheduled'
+              ? session.timing.startsAt.slice(0, 10)
+              : session.timing.startsOn,
+            endsOn: session.timing.kind === 'scheduled'
+              ? session.timing.startsAt.slice(0, 10)
+              : session.timing.endsOn,
             themeIds: event.themeIds,
             months: monthsForSession(session),
             searchText: [

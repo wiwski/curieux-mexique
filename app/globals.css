@@ -322,7 +322,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   background: var(--paper);
   font-size: 15px;
 }
-.month-filters { display: flex; gap: 8px; }
+.month-filters { display: flex; flex-wrap: wrap; gap: 8px; }
 .filter-button {
   height: 40px;
   padding-inline: 14px;
@@ -617,6 +617,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .filters { grid-template-columns: 1fr; padding: 14px; }
   .search-field { grid-column: auto; }
   .month-filters { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .venue-filters .month-filters { grid-template-columns: repeat(2, 1fr); }
+  .venue-filters .month-filters .filter-button:first-child { grid-column: 1 / -1; }
   .filter-button { padding-inline: 8px; }
   .theme-filter { width: 100%; justify-content: space-between; }
   .theme-filter [data-slot='native-select-wrapper'] { width: min(70%, 230px); }
