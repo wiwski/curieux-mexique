@@ -2,10 +2,15 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import { MapPin, Search, X } from 'lucide-react';
+import { MapPin, X } from 'lucide-react';
+import { EventFilters } from '@/components/event-filters';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { NativeSelect, NativeSelectOption } from '@/components/ui/native-select';
+import {
+  datePeriodForFilter,
+  matchesDateFilter,
+  matchesTypeFilter,
+  type DateFilter,
+} from '@/lib/event-filters';
 
 export type ProgrammeItem = {
   id: string;
@@ -17,85 +22,66 @@ export type ProgrammeItem = {
   themeIds: string[];
   venueName: string;
   venueLocality: string;
+  commune: string;
   dateLabel: string;
   day: string;
   monthLabel: string;
+  startsOn: string;
+  endsOn: string;
   months: string[];
   searchText: string;
 };
 
-type ThemeOption = { id: string; label: string };
-
-export function ProgrammeBrowser({
-  items,
-  themes,
-}: {
-  items: ProgrammeItem[];
-  themes: ThemeOption[];
-}) {
+export function ProgrammeBrowser({ items }: { items: ProgrammeItem[] }) {
   const [query, setQuery] = useState('');
-  const [month, setMonth] = useState('all');
-  const [theme, setTheme] = useState('all');
+  const [dateFilter, setDateFilter] = useState<DateFilter>('all');
+  const [commune, setCommune] = useState('all');
+  const [type, setType] = useState('all');
+
+  const communes = useMemo(
+    () => [...new Set(items.map((item) => item.commune))].sort((a, b) => a.localeCompare(b, 'fr')),
+    [items],
+  );
 
   const filtered = useMemo(() => {
     const normalizedQuery = query.trim().toLocaleLowerCase('fr');
+    const selectedPeriod = datePeriodForFilter(dateFilter);
     return items.filter((item) => {
-      const matchesQuery = !normalizedQuery || item.searchText.includes(normalizedQuery);
-      const matchesMonth = month === 'all' || item.months.includes(month);
-      const matchesTheme = theme === 'all' || item.themeIds.includes(theme);
-      return matchesQuery && matchesMonth && matchesTheme;
+      const matchesQuery = !normalizedQuery
+        || item.searchText.includes(normalizedQuery)
+        || item.commune.toLocaleLowerCase('fr').includes(normalizedQuery);
+      const matchesCommune = commune === 'all' || item.commune === commune;
+      const matchesDate = matchesDateFilter(item, dateFilter, selectedPeriod);
+      const matchesType = matchesTypeFilter(item.themeIds, type);
+      return matchesQuery && matchesCommune && matchesDate && matchesType;
     });
-  }, [items, month, query, theme]);
+  }, [commune, dateFilter, items, query, type]);
 
-  const hasFilters = Boolean(query) || month !== 'all' || theme !== 'all';
+  const hasFilters = Boolean(query)
+    || dateFilter !== 'all'
+    || commune !== 'all'
+    || type !== 'all';
 
   function resetFilters() {
     setQuery('');
-    setMonth('all');
-    setTheme('all');
+    setDateFilter('all');
+    setCommune('all');
+    setType('all');
   }
 
   return (
     <div className="programme-browser">
-      <div className="filters" aria-label="Filtrer le programme">
-        <label className="search-field">
-          <span className="sr-only">Rechercher dans le programme</span>
-          <Search aria-hidden="true" />
-          <Input
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Rechercher une activité, un lieu…"
-            className="filter-input"
-          />
-        </label>
-        <div className="month-filters" aria-label="Filtrer par mois">
-          {[
-            ['all', 'Tout'],
-            ['10', 'Octobre'],
-            ['11', 'Novembre'],
-          ].map(([value, label]) => (
-            <Button
-              key={value}
-              type="button"
-              variant={month === value ? 'default' : 'outline'}
-              aria-pressed={month === value}
-              onClick={() => setMonth(value)}
-              className="filter-button"
-            >
-              {label}
-            </Button>
-          ))}
-        </div>
-        <label className="theme-filter">
-          <span>Thème</span>
-          <NativeSelect value={theme} onChange={(event) => setTheme(event.target.value)}>
-            <NativeSelectOption value="all">Tous les thèmes</NativeSelectOption>
-            {themes.map((option) => (
-              <NativeSelectOption key={option.id} value={option.id}>{option.label}</NativeSelectOption>
-            ))}
-          </NativeSelect>
-        </label>
-      </div>
+      <EventFilters
+        query={query}
+        onQueryChange={setQuery}
+        dateFilter={dateFilter}
+        onDateFilterChange={setDateFilter}
+        commune={commune}
+        onCommuneChange={setCommune}
+        communes={communes}
+        type={type}
+        onTypeChange={setType}
+      />
 
       <div className="results-bar">
         <p aria-live="polite">

@@ -2,20 +2,20 @@ import type { Metadata } from 'next';
 import { ProgrammeBrowser, type ProgrammeItem } from '@/components/programme-browser';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
+import { communeForLocality } from '@/lib/event-filters';
 import {
   eventsById,
   formatSessionDate,
   formatsById,
   monthsForSession,
   orderedSessions,
-  programme,
   sessionDayParts,
   venuesById,
 } from '@/lib/programme';
 
 export const metadata: Metadata = {
   title: 'Programme',
-  description: 'Tous les rendez-vous de Curieux Mexique 2026, filtrables par mois et par thème.',
+  description: 'Tous les rendez-vous de Curieux Mexique 2026, filtrables par date, commune et type.',
 };
 
 export default function ProgrammePage() {
@@ -35,9 +35,16 @@ export default function ProgrammePage() {
       themeIds: event.themeIds,
       venueName: venue.name,
       venueLocality: venue.address.locality,
+      commune: communeForLocality(venue.address.locality),
       dateLabel: formatSessionDate(session),
       day: dateParts.day,
       monthLabel: dateParts.month,
+      startsOn: session.timing.kind === 'scheduled'
+        ? session.timing.startsAt.slice(0, 10)
+        : session.timing.startsOn,
+      endsOn: session.timing.kind === 'scheduled'
+        ? session.timing.startsAt.slice(0, 10)
+        : session.timing.endsOn,
       months: monthsForSession(session),
       searchText: [event.title, event.summary, formatLabel, venue.name, venue.address.locality]
         .join(' ')
@@ -53,7 +60,7 @@ export default function ProgrammePage() {
         <header className="page-intro page-intro-compact">
           <h1>Le programme</h1>
         </header>
-        <ProgrammeBrowser items={items} themes={programme.themes} />
+        <ProgrammeBrowser items={items} />
         <SiteFooter />
       </div>
     </main>

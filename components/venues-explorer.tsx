@@ -3,11 +3,16 @@
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
-import { MapPin, Search, X } from 'lucide-react';
+import { MapPin, X } from 'lucide-react';
+import { EventFilters } from '@/components/event-filters';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { NativeSelect, NativeSelectOption } from '@/components/ui/native-select';
 import type { VenueMapItem } from '@/components/venue-map-canvas';
+import {
+  datePeriodForFilter,
+  matchesDateFilter,
+  matchesTypeFilter,
+  type DateFilter,
+} from '@/lib/event-filters';
 
 const VenueMapCanvas = dynamic(
   () => import('@/components/venue-map-canvas').then((module) => module.VenueMapCanvas),
@@ -24,46 +29,7 @@ export type VenueExplorerItem = Omit<VenueMapItem, 'latitude' | 'longitude'> & {
   website: string | null;
 };
 
-export type VenueTypeOption = { id: string; label: string; themeIds: string[] };
-type DateFilter = 'all' | 'today' | 'tomorrow' | 'week' | '10' | '11';
-
-function dateKeyInParis(offsetDays = 0) {
-  const parts = new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'Europe/Paris',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-  }).formatToParts(new Date());
-  const value = Object.fromEntries(parts.map((part) => [part.type, part.value]));
-  const target = new Date(Date.UTC(
-    Number(value.year),
-    Number(value.month) - 1,
-    Number(value.day) + offsetDays,
-    12,
-  ));
-  return target.toISOString().slice(0, 10);
-}
-
-function addDays(dateKey: string, days: number) {
-  const [year, month, day] = dateKey.split('-').map(Number);
-  return new Date(Date.UTC(year, month - 1, day + days, 12)).toISOString().slice(0, 10);
-}
-
-function currentWeek(today: string) {
-  const weekday = new Date(`${today}T12:00:00Z`).getUTCDay() || 7;
-  return {
-    startsOn: addDays(today, 1 - weekday),
-    endsOn: addDays(today, 7 - weekday),
-  };
-}
-
-export function VenuesExplorer({
-  venues,
-  types,
-}: {
-  venues: VenueExplorerItem[];
-  types: VenueTypeOption[];
-}) {
+export function VenuesExplorer({ venues }: { venues: VenueExplorerItem[] }) {
   const [activeVenueId, setActiveVenueId] = useState<string | null>(null);
   const [query, setQuery] = useState('');
   const [dateFilter, setDateFilter] = useState<DateFilter>('all');
@@ -77,34 +43,20 @@ export function VenuesExplorer({
 
   const filteredVenues = useMemo(() => {
     const normalizedQuery = query.trim().toLocaleLowerCase('fr');
-    const today = dateKeyInParis();
-    const selectedPeriod = dateFilter === 'today'
-      ? { startsOn: today, endsOn: today }
-      : dateFilter === 'tomorrow'
-        ? { startsOn: addDays(today, 1), endsOn: addDays(today, 1) }
-        : dateFilter === 'week'
-          ? currentWeek(today)
-          : null;
-    const selectedThemeIds = type === 'all'
-      ? null
-      : types.find((option) => option.id === type)?.themeIds ?? [];
+    const selectedPeriod = datePeriodForFilter(dateFilter);
     return venues.flatMap((venue) => {
       if (commune !== 'all' && venue.commune !== commune) return [];
       const events = venue.events.filter((event) => {
         const matchesQuery = !normalizedQuery
           || event.searchText.includes(normalizedQuery)
           || venue.commune.toLocaleLowerCase('fr').includes(normalizedQuery);
-        const matchesDate = dateFilter === 'all'
-          || (selectedPeriod
-            ? event.startsOn <= selectedPeriod.endsOn && event.endsOn >= selectedPeriod.startsOn
-            : event.months.includes(dateFilter));
-        const matchesType = selectedThemeIds === null
-          || selectedThemeIds.some((themeId) => event.themeIds.includes(themeId));
+        const matchesDate = matchesDateFilter(event, dateFilter, selectedPeriod);
+        const matchesType = matchesTypeFilter(event.themeIds, type);
         return matchesQuery && matchesDate && matchesType;
       });
       return events.length ? [{ ...venue, events }] : [];
     });
-  }, [commune, dateFilter, query, type, types, venues]);
+  }, [commune, dateFilter, query, type, venues]);
 
   const mappedVenues: VenueMapItem[] = filteredVenues.flatMap((venue) =>
     venue.latitude === null || venue.longitude === null
@@ -147,59 +99,17 @@ export function VenuesExplorer({
 
   return (
     <div className="venue-explorer">
-      <div className="filters venue-filters" aria-label="Filtrer les événements sur la carte">
-        <label className="search-field">
-          <span className="sr-only">Rechercher un événement ou un lieu</span>
-          <Search aria-hidden="true" />
-          <Input
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Rechercher un événement, un lieu…"
-            className="filter-input"
-          />
-        </label>
-        <div className="month-filters" aria-label="Filtrer par date">
-          {[
-            ['all', 'Tout'],
-            ['today', 'Aujourd’hui'],
-            ['tomorrow', 'Demain'],
-            ['week', 'Cette semaine'],
-            ['10', 'Octobre'],
-            ['11', 'Novembre'],
-          ].map(([value, label]) => (
-            <Button
-              key={value}
-              type="button"
-              variant={dateFilter === value ? 'default' : 'outline'}
-              aria-pressed={dateFilter === value}
-              onClick={() => setDateFilter(value as DateFilter)}
-              className="filter-button"
-            >
-              {label}
-            </Button>
-          ))}
-        </div>
-        <div className="venue-select-filters">
-          <label className="theme-filter">
-            <span>Commune</span>
-            <NativeSelect value={commune} onChange={(event) => setCommune(event.target.value)}>
-              <NativeSelectOption value="all">Toutes les communes</NativeSelectOption>
-              {communes.map((option) => (
-                <NativeSelectOption key={option} value={option}>{option}</NativeSelectOption>
-              ))}
-            </NativeSelect>
-          </label>
-          <label className="theme-filter">
-            <span>Type</span>
-            <NativeSelect value={type} onChange={(event) => setType(event.target.value)}>
-              <NativeSelectOption value="all">Tous les types</NativeSelectOption>
-              {types.map((option) => (
-                <NativeSelectOption key={option.id} value={option.id}>{option.label}</NativeSelectOption>
-              ))}
-            </NativeSelect>
-          </label>
-        </div>
-      </div>
+      <EventFilters
+        query={query}
+        onQueryChange={setQuery}
+        dateFilter={dateFilter}
+        onDateFilterChange={setDateFilter}
+        commune={commune}
+        onCommuneChange={setCommune}
+        communes={communes}
+        type={type}
+        onTypeChange={setType}
+      />
 
       <div className="results-bar venue-results-bar">
         <p aria-live="polite">
