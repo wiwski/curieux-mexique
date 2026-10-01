@@ -17,6 +17,12 @@ export const metadata: Metadata = {
   description: 'La carte des rendez-vous de Curieux Mexique dans le Cap-Sizun.',
 };
 
+function communeForLocality(locality: string) {
+  if (locality === 'Esquibien - Audierne') return 'Audierne';
+  if (locality === 'Poulgoazec') return 'Plouhinec';
+  return locality;
+}
+
 export default function VenuesPage() {
   const usedVenueIds = new Set(programme.sessions.map((session) => session.venueId));
   const venues = programme.venues
@@ -36,6 +42,7 @@ export default function VenuesPage() {
     name: venue.name,
     address: venueAddress(venue),
     locality: venue.address.locality,
+    commune: communeForLocality(venue.address.locality),
     latitude: venue.geo?.latitude ?? null,
     longitude: venue.geo?.longitude ?? null,
     events: (sessionsByVenue.get(venue.id) ?? []).flatMap((session) => {
