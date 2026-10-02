@@ -45,7 +45,7 @@ jobs:
         run: pnpm build
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-          NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.base_url }}
+          NEXT_PUBLIC_SITE_URL: https://curieux-mexique.lepassage.bzh
 
       - name: Désactiver Jekyll
         run: touch out/.nojekyll
